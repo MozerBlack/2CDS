@@ -4,18 +4,18 @@
     box-sizing: border-box;
   }
   
-  body {
+  body{
     font-family: "Poppins", sans-serif;
-  }
+    }
   
-  header {
+  header{
     background-color: #424e61;
     color: white;
     width: 100%;
     padding: 20px;
+
   }
-  
-  .cabecalho-itens {
+  .cabecalho-itens{
     max-width: 1980px;
     margin: 0 auto;
     display: flex;
@@ -24,56 +24,56 @@
   }
   
   .cabecalho-imagem {
-    width: 6%;
+    width: 10%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   
-  .titulo_site {
+  .titulo_site{
     padding: 50px;
     text-align: center;
     width: 50%;
-    font-size: 30px;
+    font: 30px;
   }
   
-  .sociais {
+  .sociais{
     display: flex;
     justify-content: flex-end;
     width: 25%;
     padding-right: 30px;
   }
   
-  .banner1 {
+  .banner1{
     display: flex;
     justify-content: center;
   }
   
-  .estudante_titulo {
+  .estudante_titulo{
     padding: 50px;
     text-align: center;
   }
   
-  .estudante-nome {
+  .estudante-nome{
     text-align: center;
   }
   
-  .estudante-imagem {
+  .estudante-imagem{
     width: 120px;
   }
   
-  .estudante-icone {
+  .estudante-icone{
     width: 38px;
     padding: 4px 8px;
   }
   
-  .estudante {
+  .estudante{
     background-color: #2df788;
     padding: 24px 0;
     text-align: center;
   }
   
-  .estudante-div {
+  .estudante-div{
     text-align: center;
     padding: 24px 0;
   }
