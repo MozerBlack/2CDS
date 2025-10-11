@@ -1,107 +1,238 @@
+/* style.css */
+
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
- 
-  body {
-    font-family: "Poppins", sans-serif;
-  }
- 
-  header {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* -------------------------------------- */
+/* CABEÇALHO (HEADER) */
+/* -------------------------------------- */
+
+.cabecalho {
     background-color: #424e61;
     color: white;
-    width: 100%;
-    padding: 20px;
-  }
- 
-  .cabecalho-itens {
-    max-width: 1980px;
-    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cab-top-left {
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
- 
-  .cabecalho-imagem {
-    width: 6%;
+}
+
+.sociais-left {
+    display: none; /* Esconde os ícones sociais no mobile */
+    gap: 10px;
+}
+
+.icon-soc {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.icon-soc:hover {
+    opacity: 1;
+}
+
+.marca {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-  }
- 
-  .titulo_site {
-    padding: 50px;
-    text-align: center;
-    width: 50%;
-    font-size: 30px;
-  }
- 
-  .sociais {
-    display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    padding-right: 30px;
-  }
- 
-  .banner1 {
-    display: flex;
-    justify-content: center;
-  }
- 
-  .estudante_titulo {
-    padding: 50px;
-    text-align: center;
-  }
- 
-  .estudante-nome {
-    text-align: center;
-  }
- 
-  .estudante-imagem {
-    width: 120px;
-  }
- 
-  .estudante-icone {
-    width: 38px;
-    padding: 4px 8px;
-  }
- 
-  .estudante {
-    background-color: #FFF6E9;
-    padding: 24px 0;
-    text-align: center;
-  }
- 
-  .estudante-div {
-    text-align: center;
-    padding: 24px 0;
-  }
- 
-  .estudantes_todos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
- 
-  .escola {
-    background-image: linear-gradient(#40A2E3, #297bb3);
+    margin-left: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Botão Hamburger (visível no mobile) */
+.menu-toggle {
+    background: none;
+    border: none;
     color: white;
-    padding: 24px 0;
-    text-align: center;
-  }
- 
-  .escola-titulo {
-    padding: 50px;
-    text-align: center;
-  }
- 
-  .logo_rodape {
-    height: 80px;
-    padding: 12px 0;
-  }
- 
-  .link {
-    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* -------------------------------------- */
+/* MENU LATERAL (SIDE MENU) */
+/* -------------------------------------- */
+
+.side-menu {
+    height: 100%;
+    width: 280px; /* Largura padrão do menu */
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+    /* Posição inicial: esconde o menu para a direita */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Estado Ativo (O JavaScript adiciona esta classe para MOSTRAR o menu) */
+.side-menu.is-open {
+    transform: translateX(0); /* Move o menu para a posição visível */
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #424e61;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.side-link {
+    padding: 15px 20px;
     text-decoration: none;
-  }
+    color: #424e61;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.side-link:hover {
+    background-color: #f0f2f5;
+}
+
+/* -------------------------------------- */
+/* OVERLAY (Sombra de Fundo) */
+/* -------------------------------------- */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 150;
+    transition: opacity 0.4s;
+}
+
+/* Classe que o JS remove para exibir o overlay */
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* -------------------------------------- */
+/* CONTEÚDO PRINCIPAL (Main e Banner) */
+/* -------------------------------------- */
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.conteudo {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.conteudo h2 {
+    color: #424e61;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #40A2E3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #297bb3;
+}
+
+/* -------------------------------------- */
+/* RODAPÉ (FOOTER) */
+/* -------------------------------------- */
+
+.rodape {
+    background-color: #424e61;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+
+/* -------------------------------------- */
+/* REGRAS PARA DESKTOP (Telas Largas) */
+/* -------------------------------------- */
+@media screen and (min-width: 768px) {
+    
+    .cabecalho {
+        /* Garante que o menu toggle suma no desktop */
+        justify-content: flex-start; 
+    }
+
+    /* Mostra os ícones sociais no desktop */
+    .sociais-left {
+        display: flex;
+    }
+    
+    .marca {
+        margin-left: 40px;
+    }
+
+    /* Esconde o botão hamburger no desktop */
+    .menu-toggle {
+        display: none; 
+    }
+
+    /* O menu lateral não deve aparecer no desktop (a navegação principal estaria no header) */
+    .side-menu {
+        display: none;
+    }
+
+    /* O overlay não é necessário no desktop */
+    .overlay {
+        display: none !important;
+    }
+}

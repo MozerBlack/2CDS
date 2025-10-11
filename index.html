@@ -1,165 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-br"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initialscale=1.0">
-<title>Home | Nossa Escola</title>
-<link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal Escola</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="cabecalho">
+    <div class="cab-top-left">
+      <div class="sociais-left">
+        <a href="https://wa.me/5541999999999" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp" class="icon-soc"></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook" class="icon-soc"></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram" class="icon-soc"></a>
+      </div>
+      <div class="marca">
+        <img src="logo_nossa_escola.png" alt="Logo" class="logo">
+        <span class="site-name">Portal Escola</span>
+      </div>
+    </div>
+    <button class="menu-toggle" id="open-menu">☰</button>
+  </header>
 
- 
-<header class="cabecalho-itens">
-<img class="cabecalho_imagem" src="logo_nossa_escola.png" alt="Logo da
-Página">
-<h1 class="titulo_site">Nossa Escola</h1>
-<div class="sociais">
-<img class="sociais" src="whatsapp.png" alt="Logo do Whats da Escola">
-<img class="sociais" src="facebook.png" alt="Facebook da Escola">
-<img class="sociais" src="instagram.png" alt="instagram da Escola">
-</div>
-</header>
+  <div id="overlay" class="overlay hidden" aria-hidden="true"></div>
 
-  <section class="banner1">
-<img class="escola.image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
-</section>
+  <aside id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <nav class="side-nav" role="navigation">
+      <a href="index.html" class="side-link">Início</a>
+      <a href="alunos.html" class="side-link">Alunos</a>
+      <a href="quiz.html" class="side-link">Quiz</a>
+      <a href="https://wa.me/5541999999999" class="side-link" target="_blank" rel="noopener">Contato</a>
+    </nav>
+  </aside>
 
-  <section class="estudante">
-<h1 class="estudante_titulo">Alunos em destaque 2025</h1>
-<p> </p>
-<div class="estudantes_todos">
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 1</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da
-escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 2</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da
-escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 3</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da
-escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 4</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da
-escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 5</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da
-escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 6</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-</div>
-</section>
+  <main class="page">
+    <section class="banner">
+      <img src="paragrafo_1_banner.jpg" alt="Banner" class="banner-img">
+    </section>
 
-<section class="estudante">
-<div class="estudantes_todos">
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 1</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 2</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 3</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 4</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 5</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-<h3 class="estudante-nome">Aluno 6</h3>
-<a href="https://cursos.alura.com.br/dashboard">
-<p> </p>
-<img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola"></a>
-<img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
-<img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
-</div>
-</div>
-</section>
+    <section class="conteudo fade-in">
+      <h2>Bem-vindo ao Portal Escola</h2>
+      <p>Projetos, cursos e atividades práticas para preparar profissionais de tecnologia e promover a aprendizagem.</p>
+      <a href="alunos.html" class="btn">Ver Alunos em Destaque</a>
+    </section>
+  </main>
 
-<footer class="escola">
-<img class="logo_rodape" src="logo_nossa_escola.png" alt="Logo
-da Escola">
-<h2 class="escola-título">Mais informações entre em contato<a class="link" href="https://wa.me/5541999999999"> 41 9.9999-9999
-</a></h2>
-<p></p>
-<p>©2025 | Curso de ADS | Aluno João Victor Mozer dos Santos | Todos os Direitos Reservados.
-Política de Privacidade | Proteção de dados | Encarregado de dados</p>
-<p> </p>
-</footer>
+  <footer class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
+  </footer>
 
-<script src="script.js" defer></script> 
-
+  <script src="script.js"></script>
 </body>
 </html>
