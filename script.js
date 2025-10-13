@@ -1,29 +1,55 @@
 // script.js
 
-
-// A função 'defer' no HTML garante que este código só rode DEPOIS que a página HTML estiver pronta.
-
-
-// 1. Seleciona o elemento que queremos modificar (o título principal)
+// 1. Seleciona elementos do DOM (Login e Conteúdo Principal)
 const tituloPrincipal = document.querySelector('.titulo_site');
+const loginForm = document.getElementById('login-form');
+const loginScreen = document.getElementById('login-screen');
+const mainContent = document.getElementById('main-content');
+const loginMessage = document.getElementById('login-message');
 
-
-// 2. Função para saudar o visitante
-function saudarVisitante() {
-    // Pede o nome do usuário assim que a página carrega
-    const nomeUsuario = prompt("Olá! Por favor, digite seu nome para uma experiência personalizada:");
-   
-    // Verifica se o elemento foi encontrado E se o usuário digitou um nome
-    if (tituloPrincipal && nomeUsuario && nomeUsuario.trim() !== '') {
-        // Altera o conteúdo de texto para uma saudação personalizada
-        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${nomeUsuario.trim()}!`;
-    } else if (tituloPrincipal) {
-        // Se o usuário clicou em Cancelar ou não digitou nada
-        tituloPrincipal.textContent = "Seja Bem-vindo(a) à Nossa Escola!";
+// --- Função de Saudação (Modificada para ser chamada após o login) ---
+function saudarVisitante(username) {
+    if (tituloPrincipal) {
+        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
     }
 }
 
-
-// 3. Executa a função de saudação
-// Usa o setTimeout para dar um pequeno atraso, dando tempo para a página carregar
-setTimeout(saudarVisitante, 500); // 500ms (meio segundo)
+// --- Lógica Principal de Login ---
+if (loginForm && loginScreen && mainContent) {
+    
+    // Adiciona o ouvinte de evento para o envio do formulário
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede que o formulário recarregue a página
+        
+        // Pega os valores dos campos
+        const usernameInput = document.getElementById('username').value.trim();
+        const passwordInput = document.getElementById('password').value.trim();
+        
+        // **Credenciais de Teste:**
+        const USER_CORRETO = "aluno";
+        const SENHA_CORRETA = "12345";
+        
+        // Simulação de verificação
+        if (usernameInput === USER_CORRETO && passwordInput === SENHA_CORRETA) {
+            
+            // Login Bem-Sucedido
+            
+            // 1. Esconde a tela de login
+            loginScreen.style.display = 'none'; 
+            
+            // 2. Mostra o conteúdo principal (seu modelo de página)
+            mainContent.classList.remove('hidden-content'); 
+            
+            // 3. Executa a saudação personalizada no título da página
+            saudarVisitante(usernameInput);
+            
+        } else {
+            // Login Falhou
+            loginMessage.textContent = "Usuário ou senha incorretos. Dica: use 'aluno' e '12345'.";
+        }
+    });
+    
+} else {
+    // Caso algum ID esteja faltando no HTML (para segurança)
+    console.error("Erro: Um ou mais IDs de login ou conteúdo principal não foram encontrados.");
+}

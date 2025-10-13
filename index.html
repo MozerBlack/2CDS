@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head>
+<html lang="pt-br">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initialscale=1.0">
 <title>Home | Nossa Escola</title>
@@ -7,9 +8,26 @@
 </head>
 <body>
 
+<div id="login-screen" class="login-container">
+    <div class="login-box">
+        <h2>Acesso ao Portal</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <p id="login-message" class="error-message"></p>
+        </form>
+    </div>
+</div>
 
- 
-<!--header é a parte do cabeçalho do site, é o topo da página-->
+<div id="main-content" class="hidden-content">
+ 
 <header class="cabecalho-itens">
 <img class="cabecalho_imagem" src="logo_nossa_escola.png" alt="Logo da
 Página">
@@ -21,15 +39,11 @@ Página">
 </div>
 </header>
 
-
-  <!--Seção banner 1 é a parte do paragrafo 1 da página-->
-<section class="banner1">
+  <section class="banner1">
 <img class="escola.image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
 </section>
 
-
-  <!--Seção estudantes é a parte do paragrafo 2 da página-->
-<section class="estudante">
+  <section class="estudante">
 <h1 class="estudante_titulo">Alunos em destaque 2025</h1>
 <p> </p>
 <div class="estudantes_todos">
@@ -95,8 +109,6 @@ escola"></a>
 </div>
 </section>
 
-
-<!--Seção estudantes é a parte do paragrafo 3 da página-->
 <section class="estudante">
 <div class="estudantes_todos">
 <div class="estudante-div">
@@ -156,7 +168,6 @@ escola"></a>
 </div>
 </section>
 
-
 <footer class="escola">
 <img class="logo_rodape" src="logo_nossa_escola.png" alt="Logo
 da Escola">
@@ -168,6 +179,6 @@ Política de Privacidade | Proteção de dados | Encarregado de dados</p>
 <p> </p>
 </footer>
 
-
+</div> <script src="script.js" defer></script> 
 </body>
 </html>
