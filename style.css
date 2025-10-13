@@ -1,78 +1,109 @@
-/* style.css (Adições para o Login) */
-
-/* Classe para esconder o conteúdo principal */
-.hidden-content {
-    display: none;
-}
-
-/* Estilo para a tela de login */
-.login-container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+ 
+  header {
+    background-color: #424e61;
+    color: white;
+    width: 100%;
+    padding: 20px;
+  }
+ 
+  .cabecalho-itens {
+    max-width: 1980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .cabecalho-imagem {
+    width: 6%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+ 
+  .titulo_site {
+    padding: 50px;
+    text-align: center;
+    width: 50%;
+    font-size: 30px;
+  }
+ 
+  .sociais {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    padding-right: 30px;
+  }
+ 
+  .banner1 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: fixed; /* Fixa na tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f0f2f5; /* Fundo mais claro */
-    z-index: 1000;
-}
-
-.login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 350px;
+  }
+ 
+  .estudante_titulo {
+    padding: 50px;
     text-align: center;
-}
-
-.login-box h2 {
-    color: #424e61;
-    margin-bottom: 30px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.login-box input[type="text"],
-.login-box input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.login-box button {
-    width: 100%;
-    padding: 12px;
-    background-color: #40A2E3;
+  }
+ 
+  .estudante-nome {
+    text-align: center;
+  }
+ 
+  .estudante-imagem {
+    width: 120px;
+  }
+ 
+  .estudante-icone {
+    width: 38px;
+    padding: 4px 8px;
+  }
+ 
+  .estudante {
+    background-color: #FFF6E9;
+    padding: 24px 0;
+    text-align: center;
+  }
+ 
+  .estudante-div {
+    text-align: center;
+    padding: 24px 0;
+  }
+ 
+  .estudantes_todos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+ 
+  .escola {
+    background-image: linear-gradient(#40A2E3, #297bb3);
     color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    padding: 24px 0;
+    text-align: center;
+  }
+ 
+  .escola-titulo {
+    padding: 50px;
+    text-align: center;
+  }
 
-.login-box button:hover {
-    background-color: #297bb3;
-}
 
-.error-message {
-    color: red;
-    margin-top: 15px;
-    font-weight: bold;
-}
+ 
+  .logo_rodape {
+    height: 80px;
+    padding: 12px 0;
+  }
+ 
+  .link {
+    color: #ffffff;
+    text-decoration: none;
+  }

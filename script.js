@@ -1,52 +1,29 @@
 // script.js
 
-// 1. Seleciona elementos do DOM
+
+// A função 'defer' no HTML garante que este código só rode DEPOIS que a página HTML estiver pronta.
+
+
+// 1. Seleciona o elemento que queremos modificar (o título principal)
 const tituloPrincipal = document.querySelector('.titulo_site');
-const loginForm = document.getElementById('login-form');
-const loginScreen = document.getElementById('login-screen');
-const mainContent = document.getElementById('main-content');
-const loginMessage = document.getElementById('login-message');
 
-// --- Função de Saudação (Mantida e reutilizada) ---
-function saudarVisitante(username) {
-    // Altera o conteúdo de texto para uma saudação personalizada
-    tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
-}
 
-// --- Função de Login (Nova Lógica) ---
-if (loginForm) {
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        
-        const usernameInput = document.getElementById('username').value.trim();
-        const passwordInput = document.getElementById('password').value.trim();
-        
-        // **IMPORTANTE: Esta é uma validação SIMPLES APENAS para demonstração.**
-        // Em um projeto real, a senha e o usuário seriam verificados em um servidor.
-        const USER_CORRETO = "aluno";
-        const SENHA_CORRETA = "12345";
-        
-        if (usernameInput === USER_CORRETO && passwordInput === SENHA_CORRETA) {
-            
-            // Login Bem-Sucedido
-            loginScreen.style.display = 'none'; // Esconde a tela de login
-            mainContent.classList.remove('hidden-content'); // Mostra o conteúdo principal
-            
-            // Executa a saudação com o nome de usuário fornecido
-            saudarVisitante(usernameInput);
-            
-        } else {
-            // Login Falhou
-            loginMessage.textContent = "Usuário ou senha incorretos. Tente 'aluno' e '12345'.";
-        }
-    });
-} else {
-    // Se o formulário não for encontrado, assume que está logado e exibe o conteúdo
-    if (mainContent) {
-        mainContent.classList.remove('hidden-content');
-    }
-    // E executa a saudação padrão se for a Home sem login
-    if (tituloPrincipal) {
-        tituloPrincipal.textContent = "Nossa Escola";
+// 2. Função para saudar o visitante
+function saudarVisitante() {
+    // Pede o nome do usuário assim que a página carrega
+    const nomeUsuario = prompt("Olá! Por favor, digite seu nome para uma experiência personalizada:");
+   
+    // Verifica se o elemento foi encontrado E se o usuário digitou um nome
+    if (tituloPrincipal && nomeUsuario && nomeUsuario.trim() !== '') {
+        // Altera o conteúdo de texto para uma saudação personalizada
+        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${nomeUsuario.trim()}!`;
+    } else if (tituloPrincipal) {
+        // Se o usuário clicou em Cancelar ou não digitou nada
+        tituloPrincipal.textContent = "Seja Bem-vindo(a) à Nossa Escola!";
     }
 }
+
+
+// 3. Executa a função de saudação
+// Usa o setTimeout para dar um pequeno atraso, dando tempo para a página carregar
+setTimeout(saudarVisitante, 500); // 500ms (meio segundo)
