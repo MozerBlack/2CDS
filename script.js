@@ -45,7 +45,7 @@ if (loginForm && loginScreen && mainContent) {
             
         } else {
             // Login Falhou
-            loginMessage.textContent = "Usuário ou senha incorretos. Dica: use 'aluno' e '12345'.";
+            loginMessage.textContent = "Usuário ou senha incorretos.";
         }
     });
     
