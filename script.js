@@ -26,7 +26,7 @@ if (loginForm && loginScreen && mainContent) {
         const passwordInput = document.getElementById('password').value.trim();
         
         // **Credenciais de Teste:**
-        const USER_CORRETO = "aluno";
+        const USER_CORRETO = "Mozer";
         const SENHA_CORRETA = "12345";
         
         // Simulação de verificação

@@ -1,7 +1,7 @@
 /* style.css */
 
 /* --------------------------------------- */
-/* BASE E REGRAS GERAIS */
+/* BASE E REGRAS GERAIS (Seu código original) */
 /* --------------------------------------- */
 * {
     margin: 0;
@@ -85,6 +85,18 @@ header {
 .estudante-div {
     text-align: center;
     padding: 24px 0;
+    
+    /* NOVIDADE: Efeito de Transição (Interação) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 8px;
+}
+
+/* NOVIDADE: Efeito de Hover/Focus nos Alunos */
+.estudante-div:hover,
+.estudante-div:focus-within {
+    transform: scale(1.05); /* Pequeno zoom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra de destaque */
+    z-index: 10;
 }
 
 .estudantes_todos {
