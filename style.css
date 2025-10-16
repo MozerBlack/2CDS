@@ -211,19 +211,3 @@ header {
     margin-top: 15px;
     font-weight: bold;
 }
-
-/* style.css */
-
-/* ... (O restante do seu CSS) ... */
-
-/* NOVO: Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
-.estudante-icones {
-    /* Ativa o Flexbox para alinhar os ícones horizontalmente */
-    display: flex; 
-    
-    /* Centraliza os ícones dentro da div do aluno */
-    justify-content: center;
-    
-    /* Adiciona um pequeno espaçamento vertical para separar dos outros elementos */
-    margin-top: 10px;
-}
