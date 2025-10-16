@@ -46,7 +46,7 @@ if (loginForm && loginScreen && mainContent) {
         } else {
             // Login Falhou
             // NOVIDADE: Mensagem de erro que informa a senha correta
-            loginMessage.textContent = "Usuário ou senha incorretos. Credenciais de teste: Usuário 'Mozer', Senha '12345'.";
+            loginMessage.textContent = "Usuário ou senha incorretos.";
         }
     });
     
