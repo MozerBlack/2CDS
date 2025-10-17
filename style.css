@@ -227,3 +227,20 @@ header {
     /* Adiciona um pequeno espaçamento vertical para separar dos outros elementos */
     margin-top: 10px;
 }
+
+/* style.css - Adicione esta regra ao seu CSS */
+
+/* NOVO: Garante que as imagens dentro dos links sociais tenham um tamanho definido */
+.sociais img {
+    height: 40px; /* Defina a altura desejada */
+    width: auto; /* Mantém a proporção */
+    padding: 0 5px; /* Adiciona espaçamento entre elas */
+}
+
+/* O seletor .sociais antigo controla a div que as contém, e deve permanecer assim: */
+.sociais {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    padding-right: 30px;
+}
