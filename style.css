@@ -1,7 +1,7 @@
 /* style.css */
 
 /* --------------------------------------- */
-/* BASE E REGRAS GERAIS (Seu código original) */
+/* BASE E REGRAS GERAIS */
 /* --------------------------------------- */
 * {
     margin: 0;
@@ -49,6 +49,41 @@ header {
     padding-right: 30px;
 }
 
+/* CORREÇÃO/ADIÇÃO: Estilo para as IMAGENS sociais no cabeçalho */
+.sociais img {
+    height: 40px; /* Define a altura desejada para manter o tamanho */
+    width: auto;
+    padding: 0 5px; /* Adiciona espaçamento entre os ícones */
+}
+
+/* --------------------------------------- */
+/* NOVIDADE: MENU PRINCIPAL (NAV) */
+/* --------------------------------------- */
+.menu-principal {
+    background-color: #f8f8f8; /* Cor de fundo clara para o menu */
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #424e61; /* Cor do texto igual ao do cabeçalho */
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+    display: inline-block; /* Permite espaçamento e hover */
+}
+
+.menu-link:hover {
+    color: white;
+    background-color: #40A2E3; /* Cor de destaque no hover */
+}
+
+
 /* --------------------------------------- */
 /* SEÇÕES PRINCIPAIS (Home) */
 /* --------------------------------------- */
@@ -86,12 +121,12 @@ header {
     text-align: center;
     padding: 24px 0;
     
-    /* NOVIDADE: Efeito de Transição (Interação) */
+    /* Efeito de Transição (Interação) */
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border-radius: 8px;
 }
 
-/* NOVIDADE: Efeito de Hover/Focus nos Alunos */
+/* Efeito de Hover/Focus nos Alunos */
 .estudante-div:hover,
 .estudante-div:focus-within {
     transform: scale(1.05); /* Pequeno zoom */
@@ -103,6 +138,13 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
+.estudante-icones {
+    display: flex; 
+    justify-content: center;
+    margin-top: 10px;
 }
 
 /* --------------------------------------- */
@@ -132,7 +174,7 @@ header {
 }
 
 /* --------------------------------------- */
-/* NOVIDADE: Estilos da Tela de Login */
+/* Estilos da Tela de Login */
 /* --------------------------------------- */
 
 /* Classe para esconder o conteúdo principal da Home */
@@ -210,37 +252,4 @@ header {
     color: red;
     margin-top: 15px;
     font-weight: bold;
-}
-
-/* style.css */
-
-/* ... (O restante do seu CSS) ... */
-
-/* NOVO: Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
-.estudante-icones {
-    /* Ativa o Flexbox para alinhar os ícones horizontalmente */
-    display: flex; 
-    
-    /* Centraliza os ícones dentro da div do aluno */
-    justify-content: center;
-    
-    /* Adiciona um pequeno espaçamento vertical para separar dos outros elementos */
-    margin-top: 10px;
-}
-
-/* style.css - Adicione esta regra ao seu CSS */
-
-/* NOVO: Garante que as imagens dentro dos links sociais tenham um tamanho definido */
-.sociais img {
-    height: 40px; /* Defina a altura desejada */
-    width: auto; /* Mantém a proporção */
-    padding: 0 5px; /* Adiciona espaçamento entre elas */
-}
-
-/* O seletor .sociais antigo controla a div que as contém, e deve permanecer assim: */
-.sociais {
-    display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    padding-right: 30px;
 }
