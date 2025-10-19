@@ -109,11 +109,11 @@ header {
     text-align: center;
 }
 
-/* Container que alinha todos os cards */
+/* Container que alinha todos os cards (RESPONSÁVEL PELAS FILEIRAS HORIZONTAIS) */
 .estudantes_todos {
     display: flex;
-    justify-content: center; /* Centraliza o bloco inteiro */
-    flex-wrap: wrap;
+    justify-content: center; /* Centraliza o bloco inteiro de cards */
+    flex-wrap: wrap; /* Permite a quebra de linha para telas menores */
     gap: 25px; /* Adiciona espaçamento uniforme entre os cards */
     max-width: 1200px; /* Limita a largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner dentro da tela */
@@ -140,8 +140,13 @@ header {
     z-index: 10;
 }
 
+/* CORREÇÃO: Garante que a imagem tenha proporção e formato consistentes */
 .estudante-imagem {
     width: 120px;
+    height: 120px; /* Adicionado para garantir que o formato circular seja perfeito */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 10px;
 }
 
 .estudante-nome {
@@ -152,12 +157,13 @@ header {
 /* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 .estudante-icones {
     display: flex; 
-    justify-content: center;
+    justify-content: center; /* Centraliza os ícones no card */
     margin-top: 15px; 
 }
 
 .estudante-icone {
     width: 32px; 
+    height: 32px; /* Adicionado para padronizar o tamanho dos ícones */
     padding: 0 5px; 
 }
 
