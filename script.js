@@ -66,7 +66,7 @@ if (loginForm && loginScreen && mainContent && alunosPage) {
             
         } else {
             // Login Falhou
-            loginMessage.textContent = "Usuário ou senha incorreta.";
+            loginMessage.textContent = "Usuário ou senha incorreto.";
         }
     });
     

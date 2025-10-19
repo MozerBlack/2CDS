@@ -52,14 +52,13 @@ header {
     padding-right: 30px;
 }
 
-/* Correção: Estilo para as IMAGENS sociais no cabeçalho */
 .sociais img {
     height: 40px; 
     width: auto;
     padding: 0 5px; 
 }
 
-/* NOVO: MENU PRINCIPAL (NAV) */
+/* MENU PRINCIPAL (NAV) */
 .menu-principal {
     background-color: #f8f8f8; 
     text-align: center;
@@ -94,23 +93,10 @@ header {
     justify-content: center;
 }
 
-.estudante_titulo {
-    padding: 50px;
-    text-align: center;
-}
 
-.estudante-nome {
-    text-align: center;
-}
-
-.estudante-imagem {
-    width: 120px;
-}
-
-.estudante-icone {
-    width: 38px;
-    padding: 4px 8px;
-}
+/* --------------------------------------- */
+/* MELHORIAS NO LAYOUT DOS ALUNOS */
+/* --------------------------------------- */
 
 .estudante {
     background-color: #FFF6E9;
@@ -118,33 +104,63 @@ header {
     text-align: center;
 }
 
-.estudante-div {
+.estudante_titulo {
+    padding: 50px 0 30px;
     text-align: center;
-    padding: 24px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Container que alinha todos os cards */
+.estudantes_todos {
+    display: flex;
+    justify-content: center; /* Centraliza o bloco inteiro */
+    flex-wrap: wrap;
+    gap: 25px; /* Adiciona espaçamento uniforme entre os cards */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner dentro da tela */
+    padding: 20px 10px;
+}
+
+/* Estilo para cada card de aluno */
+.estudante-div {
+    background-color: white; /* Fundo branco para o card */
+    padding: 25px 15px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 200px; /* Largura padrão do card */
+    text-align: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* Efeito de Hover/Focus nos Alunos */
 .estudante-div:hover,
 .estudante-div:focus-within {
     transform: scale(1.05); 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Sombra de destaque mais forte */
     z-index: 10;
 }
 
-.estudantes_todos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.estudante-imagem {
+    width: 120px;
+}
+
+.estudante-nome {
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 .estudante-icones {
     display: flex; 
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px; 
 }
+
+.estudante-icone {
+    width: 32px; 
+    padding: 0 5px; 
+}
+
 
 /* --------------------------------------- */
 /* RODAPÉ (Footer) */
@@ -178,7 +194,7 @@ header {
 
 /* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
 .hidden-content {
-    display: none !important; /* Adiciona !important para forçar a ocultação */
+    display: none !important;
 }
 
 /* Estilo para a tela de login (ocupa a tela toda) */
@@ -255,13 +271,13 @@ header {
 
 
 /* --------------------------------------- */
-/* NOVO: ESTILOS DA TELA DE ALUNOS */
+/* TELA SEPARADA DE ALUNOS */
 /* --------------------------------------- */
 
 #alunos-page {
     min-height: 100vh;
     background-color: #ffffff; 
-    padding-top: 0; /* Remove o padding do body */
+    padding-top: 0;
 }
 
 .cabecalho-alunos {
@@ -291,9 +307,4 @@ header {
 
 .btn-voltar:hover {
     background-color: #1e5a88;
-}
-
-.lista-alunos-completa {
-    padding: 40px;
-    text-align: center;
 }
