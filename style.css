@@ -13,6 +13,9 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* --------------------------------------- */
+/* CABEÇALHO E NAVEGAÇÃO GERAL */
+/* --------------------------------------- */
 header {
     background-color: #424e61;
     color: white;
@@ -49,18 +52,16 @@ header {
     padding-right: 30px;
 }
 
-/* CORREÇÃO/ADIÇÃO: Estilo para as IMAGENS sociais no cabeçalho */
+/* Correção: Estilo para as IMAGENS sociais no cabeçalho */
 .sociais img {
-    height: 40px; /* Define a altura desejada para manter o tamanho */
+    height: 40px; 
     width: auto;
-    padding: 0 5px; /* Adiciona espaçamento entre os ícones */
+    padding: 0 5px; 
 }
 
-/* --------------------------------------- */
-/* NOVIDADE: MENU PRINCIPAL (NAV) */
-/* --------------------------------------- */
+/* NOVO: MENU PRINCIPAL (NAV) */
 .menu-principal {
-    background-color: #f8f8f8; /* Cor de fundo clara para o menu */
+    background-color: #f8f8f8; 
     text-align: center;
     padding: 10px 0;
     border-bottom: 2px solid #ddd;
@@ -68,19 +69,19 @@ header {
 
 .menu-link {
     text-decoration: none;
-    color: #424e61; /* Cor do texto igual ao do cabeçalho */
+    color: #424e61; 
     font-weight: 600;
     font-size: 18px;
     padding: 10px 20px;
     margin: 0 10px;
     transition: color 0.3s, background-color 0.3s;
     border-radius: 4px;
-    display: inline-block; /* Permite espaçamento e hover */
+    display: inline-block;
 }
 
 .menu-link:hover {
     color: white;
-    background-color: #40A2E3; /* Cor de destaque no hover */
+    background-color: #40A2E3; 
 }
 
 
@@ -120,8 +121,6 @@ header {
 .estudante-div {
     text-align: center;
     padding: 24px 0;
-    
-    /* Efeito de Transição (Interação) */
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border-radius: 8px;
 }
@@ -129,8 +128,8 @@ header {
 /* Efeito de Hover/Focus nos Alunos */
 .estudante-div:hover,
 .estudante-div:focus-within {
-    transform: scale(1.05); /* Pequeno zoom */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra de destaque */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     z-index: 10;
 }
 
@@ -174,12 +173,12 @@ header {
 }
 
 /* --------------------------------------- */
-/* Estilos da Tela de Login */
+/* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
 /* --------------------------------------- */
 
-/* Classe para esconder o conteúdo principal da Home */
+/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
 .hidden-content {
-    display: none;
+    display: none !important; /* Adiciona !important para forçar a ocultação */
 }
 
 /* Estilo para a tela de login (ocupa a tela toda) */
@@ -187,12 +186,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Fixa na tela */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0f2f5; /* Fundo mais claro */
+    background-color: #f0f2f5; 
     z-index: 1000;
 }
 
@@ -252,4 +251,49 @@ header {
     color: red;
     margin-top: 15px;
     font-weight: bold;
+}
+
+
+/* --------------------------------------- */
+/* NOVO: ESTILOS DA TELA DE ALUNOS */
+/* --------------------------------------- */
+
+#alunos-page {
+    min-height: 100vh;
+    background-color: #ffffff; 
+    padding-top: 0; /* Remove o padding do body */
+}
+
+.cabecalho-alunos {
+    background-color: #297bb3; 
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-alunos {
+    font-size: 28px;
+    margin: 0;
+}
+
+.btn-voltar {
+    background-color: #40A2E3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #1e5a88;
+}
+
+.lista-alunos-completa {
+    padding: 40px;
+    text-align: center;
 }
