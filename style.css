@@ -25,7 +25,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--cor-texto-padrao); /* Adicionado cor de texto padrão */
+    color: var(--cor-texto-padrao);
 }
 
 /* --------------------------------------- */
@@ -43,11 +43,10 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajuste para melhor distribuição de espaço */
+    justify-content: space-between; 
 }
 
 .cabecalho-imagem {
-    /* Ajustado para não depender de porcentagem fixa, melhora responsividade */
     width: auto; 
     max-width: 80px;
     display: flex;
@@ -61,17 +60,17 @@ header {
 }
 
 .titulo_site {
-    padding: 0 50px; /* Ajustado para remover o padding vertical excessivo no header */
+    padding: 0 50px; 
     text-align: center;
     width: 50%;
     font-size: 30px;
-    flex-grow: 1; /* Permite que o título ocupe o espaço central */
+    flex-grow: 1; 
 }
 
 .sociais {
     display: flex;
     justify-content: flex-end;
-    width: auto; /* Melhor que porcentagem rígida */
+    width: auto; 
     padding-right: 30px;
 }
 
@@ -79,7 +78,7 @@ header {
     height: 40px;
     width: auto;
     padding: 0 5px;
-    transition: transform 0.2s; /* Efeito suave no hover */
+    transition: transform 0.2s; 
 }
 
 .sociais img:hover {
@@ -119,12 +118,11 @@ header {
 .banner1 {
     display: flex;
     justify-content: center;
-    /* Se for uma imagem grande, é bom ter um max-width ou ajustar o objeto */
 }
 
 
 /* --------------------------------------- */
-/* SEÇÃO ALUNOS */
+/* SEÇÃO ALUNOS (Home View) */
 /* --------------------------------------- */
 
 .estudante {
@@ -136,7 +134,7 @@ header {
 .estudante_titulo {
     padding: 50px 0 30px;
     text-align: center;
-    font-size: 32px; /* Padronização de título */
+    font-size: 32px;
 }
 
 /* Container que alinha todos os cards */
@@ -172,7 +170,6 @@ header {
 
 .estudante-imagem {
     width: 120px;
-    /* Garante que a imagem seja circular se for um avatar, por exemplo */
     border-radius: 50%; 
     object-fit: cover;
 }
@@ -183,7 +180,7 @@ header {
     font-weight: 600;
 }
 
-/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
+/* Ícones Sociais do Aluno */
 .estudante-icones {
     display: flex;
     justify-content: center;
@@ -237,12 +234,10 @@ header {
 /* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
 /* --------------------------------------- */
 
-/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
 .hidden-content {
     display: none !important;
 }
 
-/* Estilo para a tela de login (ocupa a tela toda) */
 .login-container {
     display: flex;
     justify-content: center;
@@ -316,7 +311,7 @@ header {
 
 
 /* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS */
+/* TELA SEPARADA DE ALUNOS (Melhorias no Cabeçalho) */
 /* --------------------------------------- */
 
 #alunos-page {
@@ -325,15 +320,15 @@ header {
     padding-top: 0;
 }
 
-/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
 .cabecalho-alunos {
-    background-color: var(--cor-principal-dark);
+    background-color: var(--cor-principal-dark); 
     color: white;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .titulo-alunos {
@@ -341,6 +336,7 @@ header {
     margin: 0;
     flex-grow: 1;
     text-align: left;
+    font-weight: 700;
 }
 
 .btn-voltar {
@@ -351,14 +347,15 @@ header {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
     white-space: nowrap;
-    text-decoration: none; /* Para links/botões */
-    display: inline-block; /* Garante que padding e largura funcionem */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-voltar:hover {
     background-color: #1e5a88;
+    transform: translateY(-1px);
 }
 
 /* --------------------------------------- */
@@ -416,7 +413,7 @@ header {
     }
 
 
-    /* Cabeçalho Página de Alunos (Corrigido) */
+    /* Cabeçalho Página de Alunos */
     .cabecalho-alunos {
         flex-direction: column;
         padding: 20px;
@@ -442,7 +439,7 @@ header {
 /* Ajuste fino para cards em telas muito pequenas */
 @media (max-width: 500px) {
     .estudante-div {
-        width: 90%; /* Ocupa quase toda a largura para evitar cards muito estreitos */
+        width: 90%; 
         max-width: 300px;
     }
 }
