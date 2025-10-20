@@ -4,83 +4,99 @@
 /* BASE E REGRAS GERAIS */
 /* --------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6; /* Melhoria de leitura */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Estilo para títulos principais */
+h1, h2, h3 {
+    color: #424e61;
 }
 
 /* --------------------------------------- */
 /* CABEÇALHO E NAVEGAÇÃO GERAL */
 /* --------------------------------------- */
 header {
-    background-color: #424e61;
-    color: white;
-    width: 100%;
-    padding: 20px;
+    background-color: #424e61;
+    color: white;
+    width: 100%;
+    padding: 15px 20px; 
 }
 
 .cabecalho-itens {
-    max-width: 1980px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 1400px; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 .cabecalho-imagem {
-    width: 6%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    width: auto; 
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-imagem img {
+    height: 60px; 
+    width: auto;
 }
 
 .titulo_site {
-    padding: 50px;
-    text-align: center;
-    width: 50%;
-    font-size: 30px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 24px; 
+    flex-grow: 1; 
 }
 
 .sociais {
-    display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
 }
 
 .sociais img {
-    height: 40px; 
-    width: auto;
-    padding: 0 5px; 
+    height: 30px; 
+    width: auto;
+    margin-left: 10px; 
+    transition: opacity 0.3s;
+}
+
+.sociais img:hover {
+    opacity: 0.8;
 }
 
 /* MENU PRINCIPAL (NAV) */
 .menu-principal {
-    background-color: #f8f8f8; 
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 2px solid #ddd;
+    background-color: #f8f8f8; 
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
 }
 
 .menu-link {
-    text-decoration: none;
-    color: #424e61; 
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 4px;
-    display: inline-block;
+    text-decoration: none;
+    color: #424e61; 
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 15px; 
+    margin: 0 5px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 .menu-link:hover {
-    color: white;
-    background-color: #40A2E3; 
+    color: white;
+    background-color: #40A2E3; 
 }
 
 
@@ -89,89 +105,92 @@ header {
 /* --------------------------------------- */
 
 .banner1 {
-    display: flex;
-    justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-/* NOVO ESTILO: Garante que a imagem do banner seja responsiva */
 .banner-image {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 4px; 
 }
 
 
 /* --------------------------------------- */
-/* MELHORIAS NO LAYOUT DOS ALUNOS */
+/* LAYOUT DOS ALUNOS */
 /* --------------------------------------- */
 
 .estudante {
-    background-color: #FFF6E9;
-    padding: 24px 0;
-    text-align: center;
+    background-color: #FFF6E9;
+    padding: 40px 0; 
+    text-align: center;
 }
 
 .estudante_titulo {
-    padding: 50px 0 30px;
-    text-align: center;
+    padding: 0 0 40px;
+    text-align: center;
+    font-size: 28px;
 }
 
-/* Container que alinha todos os cards (RESPONSÁVEL PELAS FILEIRAS HORIZONTAIS) */
+/* Container que alinha todos os cards */
 .estudantes_todos {
-    display: flex;
-    justify-content: center; /* Centraliza o bloco inteiro de cards */
-    flex-wrap: wrap; /* Permite a quebra de linha para telas menores */
-    gap: 25px; /* Adiciona espaçamento uniforme entre os cards */
-    max-width: 1200px; /* Limita a largura máxima do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner dentro da tela */
-    padding: 20px 10px;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    max-width: 1280px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
 /* Estilo para cada card de aluno */
 .estudante-div {
-    background-color: white; /* Fundo branco para o card */
-    padding: 25px 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 200px; /* Largura padrão do card */
-    text-align: center;
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 200px; 
+    text-align: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* Efeito de Hover/Focus nos Alunos */
 .estudante-div:hover,
 .estudante-div:focus-within {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Sombra de destaque mais forte */
-    z-index: 10;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    z-index: 10;
 }
 
-/* CORREÇÃO: Garante que a imagem tenha proporção e formato consistentes */
+/* ALTERADO AQUI: Imagem Quadrada (border-radius: 0) */
 .estudante-imagem {
-    width: 120px;
-    height: 120px; /* Adicionado para garantir que o formato circular seja perfeito */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 50%; /* Torna a imagem circular */
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 0; /* Imagem fica quadrada (formato original) */
+    margin-bottom: 15px;
 }
 
 .estudante-nome {
-    text-align: center;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 /* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 .estudante-icones {
-    display: flex; 
-    justify-content: center; /* Centraliza os ícones no card */
-    margin-top: 15px; 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 15px; 
 }
 
 .estudante-icone {
-    width: 32px; 
-    height: 32px; /* Adicionado para padronizar o tamanho dos ícones */
-    padding: 0 5px; 
+    width: 28px; 
+    height: 28px; 
+    margin: 0 5px; 
 }
 
 
@@ -180,106 +199,110 @@ header {
 /* --------------------------------------- */
 
 .escola {
-    background-image: linear-gradient(#40A2E3, #297bb3);
-    color: white;
-    padding: 24px 0;
-    text-align: center;
+    background-image: linear-gradient(#40A2E3, #297bb3);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .escola-titulo {
-    padding: 50px;
-    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
 }
 
 .logo_rodape {
-    height: 80px;
-    padding: 12px 0;
+    height: 70px;
+    padding: 10px 0;
 }
 
 .link {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 /* --------------------------------------- */
 /* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
 /* --------------------------------------- */
 
-/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
 .hidden-content {
-    display: none !important;
+    display: none !important;
 }
 
 /* Estilo para a tela de login (ocupa a tela toda) */
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f0f2f5; 
-    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f2f5; 
+    z-index: 1000;
 }
 
 .login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 350px;
-    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
 }
 
 .login-box h2 {
-    color: #424e61;
-    margin-bottom: 30px;
+    color: #424e61;
+    margin-bottom: 30px;
 }
 
 .input-group {
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
 .login-box input[type="text"],
 .login-box input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .login-box button {
-    width: 100%;
-    padding: 12px;
-    background-color: #40A2E3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    width: 100%;
+    padding: 12px;
+    background-color: #40A2E3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .login-box button:hover {
-    background-color: #297bb3;
+    background-color: #297bb3;
 }
 
 .error-message {
-    color: red;
-    margin-top: 15px;
-    font-weight: bold;
+    color: red;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 
@@ -288,36 +311,84 @@ header {
 /* --------------------------------------- */
 
 #alunos-page {
-    min-height: 100vh;
-    background-color: #ffffff; 
-    padding-top: 0;
+    min-height: 100vh;
+    background-color: #ffffff; 
 }
 
 .cabecalho-alunos {
-    background-color: #297bb3; 
-    color: white;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #297bb3; 
+    color: white;
+    padding: 15px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .titulo-alunos {
-    font-size: 28px;
-    margin: 0;
+    font-size: 26px;
+    margin: 0;
 }
 
 .btn-voltar {
-    background-color: #40A2E3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    background-color: #40A2E3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .btn-voltar:hover {
-    background-color: #1e5a88;
+    background-color: #1e5a88;
+}
+
+/* --------------------------------------- */
+/* MEDIA QUERIES (Responsividade) */
+/* --------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Cabeçalho */
+    .cabecalho-itens {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho-imagem, .sociais {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .titulo_site {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    /* Menu */
+    .menu-principal {
+        padding: 5px;
+    }
+
+    .menu-link {
+        font-size: 16px;
+        padding: 5px 10px;
+        margin: 0 3px;
+    }
+
+    /* Alunos */
+    .estudante-div {
+        width: 45%; 
+        max-width: 250px;
+    }
+
+    /* Tela de Alunos */
+    .cabecalho-alunos {
+        padding: 15px 20px;
+    }
+
+    .titulo-alunos {
+        font-size: 20px;
+    }
 }
