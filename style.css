@@ -1,402 +1,146 @@
-/* style.css */
-
-/* --------------------------------------- */
-/* VARIÁVEIS CSS (Melhoria para Manutenção) */
-/* --------------------------------------- */
+/* =======================
+   ESTILOS GERAIS
+======================= */
 :root {
-    --cor-principal: #40A2E3;      /* Azul Claro (Links, botões, gradiente) */
-    --cor-principal-dark: #297bb3; /* Azul Escuro (Hover, gradiente, cabeçalho alunos) */
-    --cor-cabecalho: #424e61;     /* Azul Chumbo do Header */
-    --cor-fundo-aluno: #FFF6E9;   /* Bege Claro da Seção de Alunos */
-    --cor-fundo-login: #f0f2f5;   /* Cinza Claro da Tela de Login */
-    --cor-texto-padrao: #333;
+    --cor-principal: #003366;
+    --cor-secundaria: #007bff;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
 }
 
-/* --------------------------------------- */
-/* BASE E REGRAS GERAIS */
-/* --------------------------------------- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--cor-texto-padrao); 
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
-/* --------------------------------------- */
-/* CABEÇALHO E NAVEGAÇÃO GERAL */
-/* --------------------------------------- */
-header {
-    background-color: var(--cor-cabecalho);
-    color: white;
-    width: 100%;
-    padding: 20px;
-}
-
-.cabecalho-itens {
-    max-width: 1980px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-}
-
-.cabecalho-imagem {
-    width: auto; 
-    max-width: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.cabecalho-imagem img {
-    width: 100%;
-    height: auto;
-}
-
-.titulo_site {
-    padding: 0 50px; 
-    text-align: center;
-    width: 50%;
-    font-size: 30px;
-    flex-grow: 1; 
-}
-
-.sociais {
-    display: flex;
-    justify-content: flex-end;
-    width: auto; 
-    padding-right: 30px;
-}
-
-.sociais img {
-    height: 40px;
-    width: auto;
-    padding: 0 5px;
-    transition: transform 0.2s;
-}
-
-.sociais img:hover {
-    transform: scale(1.1);
-}
-
-/* MENU PRINCIPAL (NAV) */
-.menu-principal {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 2px solid #ddd;
-}
-
-.menu-link {
-    text-decoration: none;
-    color: var(--cor-cabecalho);
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-.menu-link:hover {
-    color: white;
-    background-color: var(--cor-principal);
-}
-
-
-/* --------------------------------------- */
-/* SEÇÕES PRINCIPAIS (Home) */
-/* --------------------------------------- */
-
-.banner1 {
-    display: flex;
-    justify-content: center;
-}
-
-.escola-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* --------------------------------------- */
-/* MELHORIAS NO LAYOUT DOS ALUNOS */
-/* --------------------------------------- */
-
-.estudante {
-    background-color: var(--cor-fundo-aluno);
-    padding: 24px 0;
-    text-align: center;
-}
-
-.estudante_titulo {
-    padding: 50px 0 30px;
-    text-align: center;
-    font-size: 32px; 
-}
-
-/* Container que alinha todos os cards */
-.estudantes_todos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 10px;
-}
-
-/* Estilo para cada card de aluno */
-.estudante-div {
-    background-color: white;
-    padding: 25px 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito de Hover/Focus nos Alunos */
-.estudante-div:hover,
-.estudante-div:focus-within {
-    transform: scale(1.05);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-    z-index: 10;
-}
-
-.estudante-imagem {
-    width: 120px;
-    /* CORREÇÃO APLICADA: Imagens quadradas/padrão */
-    border-radius: 0; 
-    object-fit: cover;
-}
-
-.estudante-nome {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-.estudante-icones {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.estudante-icone {
-    width: 32px;
-    padding: 0 5px;
-}
-
-
-/* --------------------------------------- */
-/* RODAPÉ (Footer) */
-/* --------------------------------------- */
-
-.escola {
-    background-image: linear-gradient(var(--cor-principal), var(--cor-principal-dark));
-    color: white;
-    padding: 24px 0;
-    text-align: center;
-}
-
-.escola-titulo {
-    padding: 50px;
-    text-align: center;
-}
-
-.logo_rodape {
-    height: 80px;
-    padding: 12px 0;
-}
-
-.link {
-    color: #ffffff;
-    text-decoration: none;
-    transition: text-decoration 0.2s;
-}
-.link:hover {
-    text-decoration: underline;
-}
-
-/* --------------------------------------- */
-/* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
-/* --------------------------------------- */
-
-/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
-.hidden-content {
-    display: none !important;
-}
-
-/* Estilo para a tela de login (ocupa a tela toda) */
+/* =======================
+   LOGIN
+======================= */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cor-fundo-login);
-    z-index: 1000;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
 }
 
 .login-box {
-    background-color: white;
+    background: white;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 320px;
     text-align: center;
 }
 
-.login-box h2 {
-    color: var(--cor-cabecalho);
-    margin-bottom: 30px;
-}
-
-.input-group {
+.login-box h1 {
     margin-bottom: 20px;
-    text-align: left;
+    color: var(--cor-principal);
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.login-box input {
     width: 100%;
     padding: 10px;
+    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 6px;
 }
 
 .login-box button {
     width: 100%;
-    padding: 12px;
-    background-color: var(--cor-principal);
+    padding: 10px;
+    background: var(--cor-secundaria);
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .login-box button:hover {
-    background-color: var(--cor-principal-dark);
+    background: #0056b3;
 }
 
 .error-message {
     color: red;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-
-/* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS (Melhorias) */
-/* --------------------------------------- */
-
-#alunos-page {
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding-top: 0;
-}
-
-.cabecalho-alunos {
-    background-color: var(--cor-principal-dark);
+/* =======================
+   CONTEÚDO PRINCIPAL
+======================= */
+.topo {
+    background: var(--cor-principal);
     color: white;
-    padding: 20px 50px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.titulo-alunos {
-    font-size: 28px;
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
-}
-
-.btn-voltar {
-    background-color: var(--cor-principal);
+.topo nav a {
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    white-space: nowrap;
+    margin-right: 15px;
     text-decoration: none;
-    display: inline-block;
+    font-weight: bold;
 }
 
-.btn-voltar:hover {
-    background-color: #1e5a88;
+.topo nav a:hover {
+    text-decoration: underline;
 }
 
-/* Responsividade para o Cabeçalho da Página de Alunos */
-@media (max-width: 768px) {
-    .cabecalho-alunos {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .titulo-alunos {
-        text-align: center;
-        margin-bottom: 15px;
-        flex-grow: 0;
-        width: 100%;
-    }
-    
-    .btn-voltar {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .estudantes_todos {
-        padding: 20px;
-    }
+.conteudo {
+    padding: 30px;
 }
 
-/* Responsividade do Cabeçalho Principal (Home) */
+/* =======================
+   ALUNOS
+======================= */
+.alunos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.aluno-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.aluno-card:hover {
+    transform: scale(1.05);
+}
+
+.aluno-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.hidden-content {
+    display: none;
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
 @media (max-width: 600px) {
-    .cabecalho-itens {
+    .alunos-container {
         flex-direction: column;
-        text-align: center;
-    }
-    
-    .cabecalho-imagem, .titulo_site, .sociais {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .titulo_site {
-        padding: 10px 0;
-        font-size: 24px;
-    }
-    
-    .sociais {
-        padding-right: 0;
+        align-items: center;
     }
 }
