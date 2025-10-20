@@ -165,12 +165,12 @@ header {
     z-index: 10;
 }
 
-/* ALTERADO AQUI: Imagem Quadrada (border-radius: 0) */
+/* Imagem Quadrada (formato original) */
 .estudante-imagem {
     width: 100px;
     height: 100px; 
     object-fit: cover; 
-    border-radius: 0; /* Imagem fica quadrada (formato original) */
+    border-radius: 0; 
     margin-bottom: 15px;
 }
 
