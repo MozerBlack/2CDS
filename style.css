@@ -271,7 +271,7 @@ header {
 
 
 /* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS */
+/* TELA SEPARADA DE ALUNOS (Melhorias) */
 /* --------------------------------------- */
 
 #alunos-page {
@@ -280,18 +280,22 @@ header {
     padding-top: 0;
 }
 
+/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
 .cabecalho-alunos {
     background-color: #297bb3; 
     color: white;
     padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Mantém o título à esquerda e o botão à direita */
+    align-items: center; /* Centraliza verticalmente o título e o botão */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
 }
 
 .titulo-alunos {
     font-size: 28px;
     margin: 0;
+    flex-grow: 1; /* Permite que o título ocupe o espaço extra */
+    text-align: left; /* Garante que o título se alinhe à esquerda */
 }
 
 .btn-voltar {
@@ -303,8 +307,32 @@ header {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Evita que o texto do botão quebre */
 }
 
 .btn-voltar:hover {
     background-color: #1e5a88;
+}
+
+/* Responsividade para o Cabeçalho da Página de Alunos */
+@media (max-width: 768px) {
+    .cabecalho-alunos {
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        padding: 20px;
+    }
+
+    .titulo-alunos {
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 15px;
+        flex-grow: 0; /* Remove o crescimento para centralização */
+        width: 100%;
+    }
+    
+    .btn-voltar {
+        width: 100%; /* Botão ocupa a largura total */
+    }
+
+    .estudantes_todos {
+        padding: 20px; /* Mais padding nas laterais em mobile */
+    }
 }
