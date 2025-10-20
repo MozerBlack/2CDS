@@ -48,15 +48,15 @@ header {
 .cabecalho-imagem {
     /* Ajustado para flex-shrink e max-width para melhor responsividade */
     width: auto; 
-    max-width: 80px;
+    max-width: 80px; /* Mantém o tamanho máximo para a área da logo */
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-/* Adicionado estilo para a imagem dentro do contêiner */
+/* CORREÇÃO: Aplicar o estilo de imagem à tag img dentro do div */
 .cabecalho-imagem img {
-    width: 100%;
+    width: 100%; /* Faz a imagem preencher o contêiner de 80px */
     height: auto;
 }
 
@@ -120,6 +120,13 @@ header {
 .banner1 {
     display: flex;
     justify-content: center;
+}
+
+/* Adicionado estilo para a imagem de banner (baseado na correção do HTML) */
+.escola-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
