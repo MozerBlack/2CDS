@@ -1,120 +1,100 @@
 // script.js
 
-document.addEventListener('DOMContentLoaded', () => {
+// 1. Seleciona elementos do DOM (Login e Conteúdo Principal)
+const tituloPrincipal = document.querySelector('.titulo_site');
+const loginForm = document.getElementById('login-form');
+const loginScreen = document.getElementById('login-screen');
+const mainContent = document.getElementById('main-content');
+const loginMessage = document.getElementById('login-message');
+const logoutButton = document.getElementById('logout-button'); 
 
-    // 1. Seleciona elementos do DOM
-    const tituloPrincipal = document.querySelector('.titulo_site');
-    const loginForm = document.getElementById('login-form');
-    const loginScreen = document.getElementById('login-screen');
-    const mainContent = document.getElementById('main-content');
-    const loginMessage = document.getElementById('login-message');
-    const logoutButton = document.getElementById('logout-button'); 
-    const menuAlunosLink = document.getElementById('menu-alunos');
-    const alunosPage = document.getElementById('alunos-page');
-    const voltarHomeButton = document.getElementById('voltar-home');
+// 2. Seletores da nova tela de alunos
+const menuAlunosLink = document.getElementById('menu-alunos');
+const alunosPage = document.getElementById('alunos-page');
+const voltarHomeButton = document.getElementById('voltar-home');
+
+// --- Função de Saudação ---
+function saudarVisitante(username) {
+    if (tituloPrincipal) {
+        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
+    }
+}
+
+// --- Função para mostrar a Tela de Alunos ---
+function mostrarTelaAlunos() {
+    // Esconde o conteúdo principal (Home)
+    mainContent.classList.add('hidden-content');
     
-    // Credenciais de Teste
-    const USER_CORRETO = "Mozer";
-    const SENHA_CORRETA = "12345";
+    // Mostra a nova tela de alunos
+    alunosPage.classList.remove('hidden-content');
+}
+
+// --- Função para voltar para a Home ---
+function voltarParaHome() {
+    // Esconde a tela de alunos
+    alunosPage.classList.add('hidden-content');
     
-    // --- Função para mostrar a Tela de Login ---
-    function mostrarTelaLogin() {
-        loginScreen.classList.remove('hidden-content');
-        loginScreen.style.display = 'flex'; // Garante que a tela de login seja centralizada pelo CSS
-        mainContent.classList.add('hidden-content');
-        alunosPage.classList.add('hidden-content');
-        // Opcional: Limpar campos de login
-        document.getElementById('username').value = '';
-        document.getElementById('password').value = '';
-        loginMessage.textContent = '';
-        // Resetar o título após o logout
-        if (tituloPrincipal) {
-             tituloPrincipal.textContent = 'Nossa Escola';
-        }
-    }
+    // Mostra o conteúdo principal (Home)
+    mainContent.classList.remove('hidden-content');
+}
 
-    // --- Função para mostrar a Home ---
-    function mostrarHome(username) {
-        loginScreen.style.display = 'none'; // Esconde o container do login
-        mainContent.classList.remove('hidden-content'); 
-        alunosPage.classList.add('hidden-content'); 
+// --- Lógica Principal de Login ---
+if (loginForm && loginScreen && mainContent && alunosPage) {
+    
+    // Adiciona o ouvinte de evento para o envio do formulário
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
         
-        // Atualiza o título
-        if (tituloPrincipal) {
-            tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
-        }
-    }
-
-    // --- Função para mostrar a Tela de Alunos ---
-    function mostrarTelaAlunos(event) {
-        event.preventDefault(); // Impede o comportamento padrão do link
-        mainContent.classList.add('hidden-content');
-        alunosPage.classList.remove('hidden-content');
-    }
-
-    // --- Função para voltar para a Home ---
-    function voltarParaHome(event) {
-        event.preventDefault(); // Impede o comportamento padrão do botão
-        alunosPage.classList.add('hidden-content');
-        mainContent.classList.remove('hidden-content');
-    }
-
-
-    // ----------------------------------------
-    // Lógica Principal de Login
-    // ----------------------------------------
-    if (loginForm) {
-        // Garante que a tela de login seja a única visível ao carregar
-        mostrarTelaLogin(); 
+        const usernameInput = document.getElementById('username').value.trim();
+        const passwordInput = document.getElementById('password').value.trim();
         
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault(); 
+        // **Credenciais de Teste:**
+        const USER_CORRETO = "Mozer";
+        const SENHA_CORRETA = "12345";
+        
+        // Simulação de verificação
+        if (usernameInput === USER_CORRETO && passwordInput === SENHA_CORRETA) {
             
-            const usernameInput = document.getElementById('username').value.trim();
-            const passwordInput = document.getElementById('password').value.trim();
+            // Login Bem-Sucedido
+            loginScreen.style.display = 'none'; 
+            mainContent.classList.remove('hidden-content'); 
             
-            if (usernameInput === USER_CORRETO && passwordInput === SENHA_CORRETA) {
-                
-                loginMessage.textContent = "Login bem-sucedido!";
-                loginMessage.style.color = 'green';
-                
-                // Exibe a Home após um pequeno atraso para a mensagem
-                setTimeout(() => {
-                    mostrarHome(usernameInput);
-                }, 500); 
-                
-            } else {
-                // Login Falhou
-                loginMessage.textContent = "Usuário ou senha incorreto.";
-                loginMessage.style.color = 'red';
-            }
-        });
-    }
+            // Garante que a tela de alunos esteja escondida ao logar
+            alunosPage.classList.add('hidden-content'); 
 
-    // ----------------------------------------
-    // Lógica de Navegação
-    // ----------------------------------------
+            saudarVisitante(usernameInput);
+            
+        } else {
+            // Login Falhou
+            loginMessage.textContent = "Usuário ou senha incorreto.";
+        }
+    });
+    
+} else {
+    console.error("Erro: Um ou mais IDs de login ou conteúdo principal não foram encontrados.");
+}
 
-    // Logout
-    if (logoutButton) {
-        logoutButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            mostrarTelaLogin(); // Volta para a tela de login
-        });
-    }
+// --- Lógica de Logout ---
+if (logoutButton) {
+    logoutButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.reload(); 
+    });
+}
 
-    // Ir para Alunos
-    if (menuAlunosLink) {
-        menuAlunosLink.addEventListener('click', mostrarTelaAlunos);
-    }
 
-    // Voltar para Home
-    if (voltarHomeButton) {
-        voltarHomeButton.addEventListener('click', voltarParaHome);
-    }
+// --- Lógica de Alternância de Tela (Alunos) ---
 
-    // Opcional: Adiciona tratamento de erro
-    if (!loginForm || !mainContent || !alunosPage) {
-        console.error("Erro: Um ou mais elementos essenciais do DOM não foram encontrados. Verifique os IDs.");
-    }
-});
+if (menuAlunosLink) {
+    menuAlunosLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        mostrarTelaAlunos();
+    });
+}
+
+if (voltarHomeButton) {
+    voltarHomeButton.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        voltarParaHome();
+    });
+}
