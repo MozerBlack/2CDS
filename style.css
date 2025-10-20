@@ -44,33 +44,32 @@ header {
 
 .cabecalho-imagem {
     width: 60px; /* Tamanho fixo mais previsível */
-    flex-shrink: 0; /* Impede que a imagem encolha */
+    flex-shrink: 0;
     display: flex;
     align-items: center;
 }
 
 .cabecalho-imagem img {
-    width: 100%; /* Garante que a imagem preencha a div */
+    width: 100%;
     height: auto;
 }
 
 .titulo_site {
-    padding: 0 20px; /* Redução do padding para melhor adaptação */
-    text-align: left; /* Melhor alinhamento em contexto flexível */
-    flex-grow: 1; /* Permite que o título ocupe o espaço central */
-    font-size: 26px; /* Ajuste de tamanho */
+    padding: 0 20px;
+    text-align: left;
+    flex-grow: 1;
+    font-size: 26px;
 }
 
 .sociais {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-shrink: 0; /* Impede que os ícones encolham */
-    /* Removido o 'width: 25%' para permitir que o conteúdo dite a largura */
+    flex-shrink: 0;
 }
 
 .sociais img {
-    height: 35px; /* Altura um pouco menor para coesão */
+    height: 35px;
     width: auto;
     padding: 0 5px;
 }
@@ -79,7 +78,7 @@ header {
 .menu-principal {
     background-color: #f8f8f8;
     text-align: center;
-    padding: 10px 20px; /* Adiciona padding lateral para evitar toque nas bordas */
+    padding: 10px 20px;
     border-bottom: 2px solid #ddd;
 }
 
@@ -87,9 +86,9 @@ header {
     text-decoration: none;
     color: #424e61;
     font-weight: 600;
-    font-size: 16px; /* Ajuste para o tamanho mais comum */
-    padding: 10px 15px; /* Padding levemente ajustado */
-    margin: 0 5px; /* Margem reduzida para caber mais links */
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 0 5px;
     transition: color 0.3s, background-color 0.3s;
     border-radius: 4px;
     display: inline-block;
@@ -108,24 +107,29 @@ header {
 .banner1 {
     display: flex;
     justify-content: center;
-    /* Idealmente, regras para a imagem ou conteúdo do banner entrariam aqui */
+}
+
+.banner1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
 /* --------------------------------------- */
-/* MELHORIAS NO LAYOUT DOS ALUNOS */
+/* LAYOUT DOS ALUNOS */
 /* --------------------------------------- */
 
 .estudante {
     background-color: #FFF6E9;
-    padding: 40px 0; /* Aumenta o padding vertical para melhor espaçamento */
+    padding: 40px 0;
     text-align: center;
 }
 
 .estudante_titulo {
-    padding: 0 0 40px; /* Ajuste de padding, removendo o top excessivo */
+    padding: 0 0 40px;
     text-align: center;
-    font-size: 28px; /* Melhoria de tamanho */
+    font-size: 28px;
     color: #424e61;
 }
 
@@ -134,38 +138,43 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Ajuste para um espaçamento mais uniforme */
+    gap: 20px; /* Espaçamento uniforme entre os cards */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 20px; /* Aumenta o padding lateral */
+    padding: 20px 20px;
 }
 
 /* Estilo para cada card de aluno */
 .estudante-div {
     background-color: white;
-    padding: 20px 15px; /* Padding interno ligeiramente ajustado */
+    padding: 20px 15px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 220px; /* Aumento leve na largura do card */
+    
+    /* ************************************************* */
+    /* AJUSTE PARA CABER 6 ALUNOS NA FILEIRA HORIZONTAL */
+    /* ************************************************* */
+    width: 170px; /* Largura ajustada (6 * 170px + 5 * 20px < 1200px) */
+    
     text-align: center;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efeito de Hover/Focus nos Alunos */
 .estudante-div:hover,
 .estudante-div:focus-within {
-    transform: translateY(-5px); /* Efeito mais sutil e moderno */
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
 .estudante-imagem {
-    width: 100px; /* Tamanho reduzido para melhor proporção */
-    height: 100px; /* Garante que a imagem seja um círculo (se a borda for definida) */
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 50%; /* Adiciona borda circular se for uma imagem de perfil */
+    border-radius: 50%; /* Borda circular */
     margin: 0 auto 10px;
+    display: block;
 }
 
 .estudante-nome {
@@ -182,7 +191,7 @@ header {
 }
 
 .estudante-icone {
-    width: 28px; /* Tamanho reduzido para melhor proporção no card */
+    width: 28px;
     padding: 0 4px;
 }
 
@@ -194,19 +203,19 @@ header {
 .escola {
     background-image: linear-gradient(#40A2E3, #297bb3);
     color: white;
-    padding: 40px 20px; /* Aumenta o padding vertical */
+    padding: 40px 20px;
     text-align: center;
 }
 
 .escola-titulo {
-    padding: 0 0 20px; /* Ajuste de padding */
+    padding: 0 0 20px;
     font-size: 24px;
 }
 
 .logo_rodape {
-    height: 70px; /* Altura um pouco menor */
-    padding: 10px 0 20px; /* Ajuste do padding */
-    display: block; /* Para garantir o alinhamento central */
+    height: 70px;
+    padding: 10px 0 20px;
+    display: block;
     margin: 0 auto;
 }
 
@@ -237,17 +246,17 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(240, 242, 245, 0.95); /* Uso de rgba para leve transparência */
+    background-color: rgba(240, 242, 245, 0.95);
     z-index: 1000;
 }
 
 .login-box {
     background-color: white;
-    padding: 30px; /* Padding levemente ajustado */
-    border-radius: 10px; /* Borda mais suave */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais destacada */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px; /* Aumento da largura máxima */
+    max-width: 400px;
     text-align: center;
 }
 
@@ -258,24 +267,23 @@ header {
 }
 
 .input-group {
-    margin-bottom: 15px; /* Margem reduzida */
+    margin-bottom: 15px;
     text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 600; /* Levemente mais forte */
-    color: #444; /* Cor mais escura para o label */
+    font-weight: 600;
+    color: #444;
     font-size: 14px;
 }
 
 /* Agrupamento de estilos para inputs e botões */
 .login-box input[type="text"],
-.login-box input[type="password"],
-.btn-voltar { /* Adicionado btn-voltar aqui para padronização */
+.login-box input[type="password"] {
     width: 100%;
-    padding: 12px; /* Aumento do padding para inputs */
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -297,18 +305,18 @@ header {
 
 .login-box button:hover {
     background-color: #297bb3;
-    transform: translateY(-1px); /* Efeito de pressão suave */
+    transform: translateY(-1px);
 }
 
 .error-message {
-    color: #d9534f; /* Tom de vermelho mais padrão */
+    color: #d9534f;
     margin-top: 15px;
     font-weight: 600;
 }
 
 
 /* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS (Melhorias) */
+/* TELA SEPARADA DE ALUNOS */
 /* --------------------------------------- */
 
 #alunos-page {
@@ -320,7 +328,7 @@ header {
 .cabecalho-alunos {
     background-color: #297bb3;
     color: white;
-    padding: 15px 50px; /* Padding vertical ajustado para ser mais coeso com o header */
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -328,17 +336,16 @@ header {
 }
 
 .titulo-alunos {
-    font-size: 26px; /* Tamanho ajustado */
+    font-size: 26px;
     margin: 0;
     flex-grow: 1;
     text-align: left;
 }
 
 .btn-voltar {
-    /* Estilos base já definidos no agrupamento de inputs/buttons. */
-    width: auto; /* Permite que o botão tenha a largura do conteúdo, a menos que em mobile */
+    width: auto;
     min-width: 120px;
-    background-color: #40A2E3; /* Reaplicar o fundo */
+    background-color: #40A2E3;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -372,9 +379,9 @@ header {
     .titulo_site {
         text-align: center;
         padding: 10px 0;
-        width: 100%; /* Ocupa a largura total em mobile */
+        width: 100%;
         font-size: 24px;
-        order: -1; /* Move o título para cima visualmente */
+        order: -1;
     }
 
     .sociais {
@@ -396,7 +403,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    /* Regras do Cabeçalho da Página de Alunos já estavam aqui e foram mantidas/ajustadas */
+    /* Responsividade do Cabeçalho de Alunos */
     .cabecalho-alunos {
         flex-direction: column;
         padding: 20px;
@@ -417,16 +424,22 @@ header {
     .estudantes_todos {
         padding: 20px;
     }
+
+    /* Ajuste para cards de aluno em mobile */
+    .estudante-div {
+        width: 45%; /* Permite 2 cards por linha */
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 500px) {
     .menu-link {
-        display: block; /* Links de menu se tornam blocos para ocupar a largura total em telas muito pequenas */
+        display: block;
         margin: 5px 0;
     }
 
     .estudante-div {
-        width: 100%; /* Cards de aluno ocupam a largura total em telas muito pequenas */
+        width: 100%; /* 1 card por linha em telas muito pequenas */
         max-width: 300px;
     }
 
