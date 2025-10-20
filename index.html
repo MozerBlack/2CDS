@@ -1,160 +1,601 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Escola Exemplo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home | Nossa Escola</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
 <body>
 
-    <div id="main-content">
-        
-        <header>
-            <div class="cabecalho-itens">
-                <div class="cabecalho-imagem">
-                    <img src="https://via.placeholder.com/60x60?text=LOGO" alt="Logo da Escola">
-                </div>
-                <h1 class="titulo_site">ESCOLA FUTURO DIGITAL</h1>
-                <div class="sociais">
-                    <a href="#"><img src="https://via.placeholder.com/35x35?text=FB" alt="Facebook"></a>
-                    <a href="#"><img src="https://via.placeholder.com/35x35?text=IG" alt="Instagram"></a>
-                </div>
+
+
+<div id="login-screen" class="login-container">
+
+    <div class="login-box">
+
+        <h2>Acesso ao Portal</h2>
+
+        <form id="login-form">
+
+            <div class="input-group">
+
+                <label for="username">Usuário:</label>
+
+                <input type="text" id="username" required>
+
             </div>
-        </header>
 
-        <nav class="menu-principal">
-            <a href="#" class="menu-link">Home</a>
-            <a href="#" class="menu-link">Sobre</a>
-            <a href="#" class="menu-link">Cursos</a>
-            <a href="#" class="menu-link" id="btn-show-login">Área do Aluno</a>
-        </nav>
+            <div class="input-group">
 
-        <section class="banner1">
-            <img src="https://via.placeholder.com/1600x400?text=BANNER+PRINCIPAL" alt="Banner Principal da Escola">
-        </section>
+                <label for="password">Senha:</label>
 
-        <section class="estudante">
-            <h2 class="estudante_titulo">Nossos Alunos de Destaque</h2>
+                <input type="password" id="password" required>
 
-            <div class="estudantes_todos">
-                
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A1" alt="Foto do Aluno 1">
-                    <h3 class="estudante-nome">João Silva</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A2" alt="Foto do Aluno 2">
-                    <h3 class="estudante-nome">Pedro Santos</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A3" alt="Foto do Aluno 3">
-                    <h3 class="estudante-nome">Marcos Oliveira</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A4" alt="Foto do Aluno 4">
-                    <h3 class="estudante-nome">Lucas Pereira</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A5" alt="Foto do Aluno 5">
-                    <h3 class="estudante-nome">Rafael Costa</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="estudante-div" tabindex="0">
-                    <img class="estudante-imagem" src="https://via.placeholder.com/100x100?text=A6" alt="Foto do Aluno 6">
-                    <h3 class="estudante-nome">André Felipe</h3>
-                    <div class="estudante-icones">
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=GH" alt="Github"></a>
-                        <a href="#"><img class="estudante-icone" src="https://via.placeholder.com/32x32?text=LI" alt="LinkedIn"></a>
-                    </div>
-                </div>
-                
             </div>
-        </section>
 
-        <footer class="escola">
-            <img class="logo_rodape" src="https://via.placeholder.com/70x70?text=LOGO" alt="Logo Rodapé">
-            <p class="escola-titulo">Escola Futuro Digital &copy; 2025</p>
-            <p>Entre em contato: <a href="mailto:contato@escola.com" class="link">contato@escola.com</a></p>
-        </footer>
+            <button type="submit">Entrar</button>
+
+            <p id="login-message" class="error-message"></p>
+
+        </form>
 
     </div>
-    
-    <div class="login-container hidden-content" id="login-screen">
-        <div class="login-box">
-            <h2>Área do Aluno</h2>
-            <form>
-                <div class="input-group">
-                    <label for="username">Usuário</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit">Entrar</button>
-            </form>
-            <p class="error-message hidden-content" id="login-error">Usuário ou senha incorretos.</p>
+
+</div>
+
+
+
+<div id="main-content" class="hidden-content">
+
+   
+
+    <header class="cabecalho-itens">
+
+        <img class="cabecalho_imagem" src="logo_nossa_escola.png" alt="Logo da Página">
+
+        <h1 class="titulo_site">Nossa Escola</h1>
+
+        <div class="sociais">
+
+            <a href="https://web.whatsapp.com/" target="_blank">
+
+                <img src="whatsapp.png" alt="Logo do Whats da Escola">
+
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+
+                <img src="facebook.png" alt="Facebook da Escola">
+
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+
+                <img src="instagram.png" alt="instagram da Escola">
+
+            </a>
+
         </div>
-    </div>
 
-    <div id="alunos-page" class="hidden-content">
-        <header class="cabecalho-alunos">
-            <h2 class="titulo-alunos">Lista Completa de Alunos</h2>
-            <button class="btn-voltar" id="btn-back-home">Voltar para a Home</button>
-        </header>
+    </header>
+
+
+
+    <nav class="menu-principal">
+
+        <a href="#" class="menu-link">Home</a>
+
+        <a href="#" class="menu-link" id="menu-alunos">Alunos</a>
+
+        <a href="#" class="menu-link">Notícias</a>
+
+        <a href="#escola" class="menu-link">Contato</a>
+
+        <a href="#" class="menu-link" id="logout-button">Sair</a>
+
+    </nav>
+
+   
+
+    <section class="banner1">
+
+        <img class="escola.image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+
+    </section>
+
+
+
+    <footer class="escola" id="escola">
+
+        <img class="logo_rodape" src="logo_nossa_escola.png" alt="Logo da Escola">
+
+        <h2 class="escola-título">Mais informações entre em contato<a class="link" href="https://wa.me/5541999999999"> 41 9.9999-9999</a></h2>
+
+        <p></p>
+
+        <p>©2025 | Curso de ADS | Aluno João Victor Mozer dos Santos | Todos os Direitos Reservados.
+
+            Política de Privacidade | Proteção de dados | Encarregado de dados</p>
+
+        <p> </p>
+
+    </footer>
+
+
+
+</div>
+
+
+
+<div id="alunos-page" class="hidden-content">
+
+   
+
+    <header class="cabecalho-alunos">
+
+        <h1 class="titulo-alunos">Todos os Alunos em Destaque</h1>
+
+        <button id="voltar-home" class="btn-voltar">Voltar à Home</button>
+
+    </header>
+
+
+
+    <section class="estudante">
+
+        <h1 class="estudante_titulo">Lista Completa 2025</h1>
 
         <div class="estudantes_todos">
-            <p style="text-align: center; width: 100%; margin-top: 50px;">Conteúdo da página interna de alunos...</p>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Antonio</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Raul</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Robert</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Allex</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Gilson</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Gabriel</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Gabriella</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Erika</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Ana</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Aghata</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Maria</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="estudante-div">
+
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+
+                <h3 class="estudante-nome">Lara</h3>
+
+                <div class="estudante-icones">
+
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+
+                    </a>
+
+                    <a href="https://wa.me/5541999999999" target="_blank">
+
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
-    
-    <script>
-        const btnShowLogin = document.getElementById('btn-show-login');
-        const loginScreen = document.getElementById('login-screen');
-        const mainContent = document.getElementById('main-content');
 
-        btnShowLogin.addEventListener('click', (e) => {
-            e.preventDefault();
-            mainContent.classList.add('hidden-content');
-            loginScreen.classList.remove('hidden-content');
-        });
+    </section>
 
-        // Para um retorno simples (você precisaria de um botão de voltar dentro da caixa de login real)
-        // Apenas para demonstração
-        document.querySelector('.login-box form').addEventListener('submit', (e) => {
-             e.preventDefault();
-             // Simulação de login falho
-             document.getElementById('login-error').classList.remove('hidden-content');
-             // Para voltar, descomente a linha abaixo (após testes)
-             // setTimeout(() => { loginScreen.classList.add('hidden-content'); mainContent.classList.remove('hidden-content'); }, 3000);
-        });
-    </script>
+
+
+</div>
+
+<script src="script.js" defer></script>
+
 </body>
-</html>

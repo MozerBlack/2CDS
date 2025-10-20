@@ -1,449 +1,678 @@
 /* style.css */
 
+
+
 /* --------------------------------------- */
+
 /* BASE E REGRAS GERAIS */
+
 /* --------------------------------------- */
+
 * {
+
     margin: 0;
+
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura total */
+
+    box-sizing: border-box;
+
 }
+
+
 
 body {
+
     font-family: "Poppins", sans-serif;
-    line-height: 1.6; /* Melhoria de legibilidade */
-    color: #333; /* Cor de texto base para o corpo */
+
 }
 
-/* Regras de acessibilidade e foco */
-a:focus,
-button:focus,
-input:focus {
-    outline: 2px solid #40A2E3; /* Destaque de foco para acessibilidade */
-    outline-offset: 2px;
-}
+
 
 /* --------------------------------------- */
+
 /* CABEÇALHO E NAVEGAÇÃO GERAL */
+
 /* --------------------------------------- */
+
 header {
+
     background-color: #424e61;
+
     color: white;
+
     width: 100%;
-    padding: 15px 0; /* Ajuste o padding vertical aqui */
+
+    padding: 20px;
+
 }
+
+
 
 .cabecalho-itens {
+
     max-width: 1980px;
+
     margin: 0 auto;
-    padding: 0 20px; /* Adiciona padding lateral para telas grandes */
+
     display: flex;
+
     align-items: center;
-    justify-content: space-between; /* Melhoria: distribui o espaço para melhor alinhamento */
+
+    justify-content: center;
+
 }
+
+
 
 .cabecalho-imagem {
-    width: 60px; /* Tamanho fixo mais previsível */
-    flex-shrink: 0;
+
+    width: 6%;
+
     display: flex;
+
+    justify-content: flex-start;
+
     align-items: center;
+
 }
 
-.cabecalho-imagem img {
-    width: 100%;
-    height: auto;
-}
+
 
 .titulo_site {
-    padding: 0 20px;
-    text-align: left;
-    flex-grow: 1;
-    font-size: 26px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    width: 50%;
+
+    font-size: 30px;
+
 }
+
+
 
 .sociais {
+
     display: flex;
+
     justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
+
+    width: 25%;
+
+    padding-right: 30px;
+
 }
+
+
 
 .sociais img {
-    height: 35px;
+
+    height: 40px;
+
     width: auto;
+
     padding: 0 5px;
+
 }
+
+
 
 /* MENU PRINCIPAL (NAV) */
+
 .menu-principal {
+
     background-color: #f8f8f8;
+
     text-align: center;
-    padding: 10px 20px;
+
+    padding: 10px 0;
+
     border-bottom: 2px solid #ddd;
+
 }
+
+
 
 .menu-link {
+
     text-decoration: none;
+
     color: #424e61;
+
     font-weight: 600;
-    font-size: 16px;
-    padding: 10px 15px;
-    margin: 0 5px;
+
+    font-size: 18px;
+
+    padding: 10px 20px;
+
+    margin: 0 10px;
+
     transition: color 0.3s, background-color 0.3s;
+
     border-radius: 4px;
+
     display: inline-block;
+
 }
+
+
 
 .menu-link:hover {
+
     color: white;
+
     background-color: #40A2E3;
+
 }
 
 
+
+
+
 /* --------------------------------------- */
+
 /* SEÇÕES PRINCIPAIS (Home) */
+
 /* --------------------------------------- */
+
+
 
 .banner1 {
+
     display: flex;
+
     justify-content: center;
-}
 
-.banner1 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 
+
+
+
 /* --------------------------------------- */
-/* LAYOUT DOS ALUNOS */
+
+/* MELHORIAS NO LAYOUT DOS ALUNOS */
+
 /* --------------------------------------- */
+
+
 
 .estudante {
+
     background-color: #FFF6E9;
-    padding: 40px 0;
+
+    padding: 24px 0;
+
     text-align: center;
+
 }
+
+
 
 .estudante_titulo {
-    padding: 0 0 40px;
+
+    padding: 50px 0 30px;
+
     text-align: center;
-    font-size: 28px;
-    color: #424e61;
+
 }
+
+
 
 /* Container que alinha todos os cards */
+
 .estudantes_todos {
+
     display: flex;
-    justify-content: center;
+
+    justify-content: center; /* Centraliza o bloco inteiro */
+
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento uniforme entre os cards */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px;
+
+    gap: 25px; /* Adiciona espaçamento uniforme entre os cards */
+
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+
+    margin: 0 auto; /* Centraliza o contêiner dentro da tela */
+
+    padding: 20px 10px;
+
 }
+
+
 
 /* Estilo para cada card de aluno */
+
 .estudante-div {
-    background-color: white;
-    padding: 20px 15px;
+
+    background-color: white; /* Fundo branco para o card */
+
+    padding: 25px 15px;
+
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    /* ************************************************* */
-    /* AJUSTE PARA CABER 6 ALUNOS NA FILEIRA HORIZONTAL */
-    /* ************************************************* */
-    width: 170px; /* Largura ajustada (6 * 170px + 5 * 20px < 1200px) */
-    
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    width: 200px; /* Largura padrão do card */
+
     text-align: center;
+
+   
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
+
 
 /* Efeito de Hover/Focus nos Alunos */
+
 .estudante-div:hover,
+
 .estudante-div:focus-within {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Sombra de destaque mais forte */
+
     z-index: 10;
+
 }
+
+
 
 .estudante-imagem {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%; /* Borda circular */
-    margin: 0 auto 10px;
-    display: block;
+
+    width: 120px;
+
 }
+
+
 
 .estudante-nome {
+
     text-align: center;
+
     margin-top: 10px;
-    font-weight: 600;
-    color: #424e61;
+
 }
+
+
+
+/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 
 .estudante-icones {
+
     display: flex;
+
     justify-content: center;
+
     margin-top: 15px;
+
 }
+
+
 
 .estudante-icone {
-    width: 28px;
-    padding: 0 4px;
+
+    width: 32px;
+
+    padding: 0 5px;
+
 }
 
 
+
+
+
 /* --------------------------------------- */
+
 /* RODAPÉ (Footer) */
+
 /* --------------------------------------- */
+
+
 
 .escola {
+
     background-image: linear-gradient(#40A2E3, #297bb3);
+
     color: white;
-    padding: 40px 20px;
+
+    padding: 24px 0;
+
     text-align: center;
+
 }
+
+
 
 .escola-titulo {
-    padding: 0 0 20px;
-    font-size: 24px;
+
+    padding: 50px;
+
+    text-align: center;
+
 }
+
+
 
 .logo_rodape {
-    height: 70px;
-    padding: 10px 0 20px;
-    display: block;
-    margin: 0 auto;
+
+    height: 80px;
+
+    padding: 12px 0;
+
 }
+
+
 
 .link {
+
     color: #ffffff;
+
     text-decoration: none;
-    transition: text-decoration 0.3s;
+
 }
 
-.link:hover {
-    text-decoration: underline;
-}
+
 
 /* --------------------------------------- */
+
 /* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
+
 /* --------------------------------------- */
+
+
+
+/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
 
 .hidden-content {
+
     display: none !important;
+
 }
+
+
+
+/* Estilo para a tela de login (ocupa a tela toda) */
 
 .login-container {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     width: 100%;
+
     height: 100%;
-    background-color: rgba(240, 242, 245, 0.95);
+
+    background-color: #f0f2f5;
+
     z-index: 1000;
+
 }
+
+
 
 .login-box {
+
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    padding: 40px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
     width: 90%;
-    max-width: 400px;
+
+    max-width: 350px;
+
     text-align: center;
+
 }
+
+
 
 .login-box h2 {
+
     color: #424e61;
-    margin-bottom: 25px;
-    font-size: 24px;
+
+    margin-bottom: 30px;
+
 }
+
+
 
 .input-group {
-    margin-bottom: 15px;
+
+    margin-bottom: 20px;
+
     text-align: left;
+
 }
+
+
 
 .input-group label {
+
     display: block;
+
     margin-bottom: 5px;
-    font-weight: 600;
-    color: #444;
-    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #555;
+
 }
 
-/* Agrupamento de estilos para inputs e botões */
+
+
 .login-box input[type="text"],
+
 .login-box input[type="password"] {
+
     width: 100%;
-    padding: 12px;
+
+    padding: 10px;
+
     border: 1px solid #ccc;
+
     border-radius: 4px;
+
     box-sizing: border-box;
-    font-size: 16px;
+
 }
+
+
 
 .login-box button {
+
     width: 100%;
+
     padding: 12px;
+
     background-color: #40A2E3;
+
     color: white;
+
     border: none;
+
     border-radius: 4px;
+
     font-size: 16px;
-    font-weight: 600;
+
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+
+    transition: background-color 0.3s;
+
 }
+
+
 
 .login-box button:hover {
+
     background-color: #297bb3;
-    transform: translateY(-1px);
+
 }
+
+
 
 .error-message {
-    color: #d9534f;
+
+    color: red;
+
     margin-top: 15px;
-    font-weight: 600;
+
+    font-weight: bold;
+
 }
 
 
+
+
+
 /* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS */
+
+/* TELA SEPARADA DE ALUNOS (Melhorias) */
+
 /* --------------------------------------- */
+
+
 
 #alunos-page {
+
     min-height: 100vh;
+
     background-color: #ffffff;
+
     padding-top: 0;
+
 }
+
+
+
+/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
 
 .cabecalho-alunos {
+
     background-color: #297bb3;
+
     color: white;
-    padding: 15px 50px;
+
+    padding: 20px 50px;
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+
+    justify-content: space-between; /* Mantém o título à esquerda e o botão à direita */
+
+    align-items: center; /* Centraliza verticalmente o título e o botão */
+
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+
 }
+
+
 
 .titulo-alunos {
-    font-size: 26px;
+
+    font-size: 28px;
+
     margin: 0;
-    flex-grow: 1;
-    text-align: left;
+
+    flex-grow: 1; /* Permite que o título ocupe o espaço extra */
+
+    text-align: left; /* Garante que o título se alinhe à esquerda */
+
 }
+
+
 
 .btn-voltar {
-    width: auto;
-    min-width: 120px;
+
     background-color: #40A2E3;
+
     color: white;
+
     border: none;
+
     padding: 10px 20px;
+
     border-radius: 5px;
+
     cursor: pointer;
-    font-size: 15px;
+
+    font-size: 16px;
+
     transition: background-color 0.3s;
-    white-space: nowrap;
+
+    white-space: nowrap; /* Evita que o texto do botão quebre */
+
 }
+
+
 
 .btn-voltar:hover {
+
     background-color: #1e5a88;
+
 }
 
-/* --------------------------------------- */
-/* RESPONSIVIDADE (MEDIA QUERIES) */
-/* --------------------------------------- */
 
-@media (max-width: 900px) {
-    .cabecalho-itens {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .cabecalho-imagem {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .titulo_site {
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-        font-size: 24px;
-        order: -1;
-    }
-
-    .sociais {
-        justify-content: center;
-        width: 100%;
-        padding-right: 0;
-        margin-top: 10px;
-    }
-
-    .menu-principal {
-        padding: 10px;
-    }
-
-    .menu-link {
-        font-size: 15px;
-        padding: 8px 10px;
-        margin: 0 3px;
-    }
-}
+/* Responsividade para o Cabeçalho da Página de Alunos */
 
 @media (max-width: 768px) {
-    /* Responsividade do Cabeçalho de Alunos */
+
     .cabecalho-alunos {
-        flex-direction: column;
+
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+
         padding: 20px;
+
     }
+
+
 
     .titulo-alunos {
-        text-align: center;
+
+        text-align: center; /* Centraliza o título */
+
         margin-bottom: 15px;
-        flex-grow: 0;
+
+        flex-grow: 0; /* Remove o crescimento para centralização */
+
         width: 100%;
-        font-size: 24px;
+
     }
+
+   
 
     .btn-voltar {
-        width: 100%;
+
+        width: 100%; /* Botão ocupa a largura total */
+
     }
+
+
 
     .estudantes_todos {
-        padding: 20px;
+
+        padding: 20px; /* Mais padding nas laterais em mobile */
+
     }
 
-    /* Ajuste para cards de aluno em mobile */
-    .estudante-div {
-        width: 45%; /* Permite 2 cards por linha */
-        max-width: 250px;
-    }
 }
 
-@media (max-width: 500px) {
-    .menu-link {
-        display: block;
-        margin: 5px 0;
-    }
 
-    .estudante-div {
-        width: 100%; /* 1 card por linha em telas muito pequenas */
-        max-width: 300px;
-    }
 
-    .login-box {
-        padding: 20px;
-    }
-}
