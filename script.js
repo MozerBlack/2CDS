@@ -8,114 +8,142 @@ const mainContent = document.getElementById('main-content');
 const loginMessage = document.getElementById('login-message');
 const logoutButton = document.getElementById('logout-button'); 
 const menuPrincipal = document.querySelector('.menu-principal'); 
-const menuHomeLink = document.getElementById('menu-home');
 
-// 2. Seletores da nova tela de alunos
+// 2. Seletores das telas secundárias
+const menuHomeLink = document.getElementById('menu-home'); // Adicionado o Home
 const menuAlunosLink = document.getElementById('menu-alunos');
 const alunosPage = document.getElementById('alunos-page');
 const voltarHomeButton = document.getElementById('voltar-home');
+
+// Seletores para Notícias (NOVOS/ATUALIZADOS)
+const menuNoticiasLink = document.getElementById('menu-noticias'); // NOVO: Link no menu
+const noticiasPage = document.getElementById('noticias-page');    // NOVO: Div da página
+const voltarHomeNoticiasButton = document.getElementById('voltar-home-noticias'); // NOVO: Botão Voltar
 
 // Credenciais de Exemplo
 const VALID_USERNAME = 'Mozer';
 const VALID_PASSWORD = '12345';
 
+// --- Função utilitária para esconder todas as páginas de conteúdo ---
+function hideAllPages() {
+    mainContent.classList.add('hidden-content');
+    alunosPage.classList.add('hidden-content');
+    // Removei configuracoesPage, pois a div não existia no HTML fornecido, 
+    // mas deixei a variável para referência futura.
+    noticiasPage.classList.add('hidden-content'); // Esconde Notícias
+}
+
 // --- Função de Saudação ---
 function saudarVisitante(username) {
-    if (tituloPrincipal) {
-        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
-    }
+    if (tituloPrincipal) {
+        tituloPrincipal.textContent = `Seja Bem-vindo(a), ${username}!`;
+    }
 }
 
 // --- Função para mostrar a Tela Home (Conteúdo Principal) ---
 function showHomePage(username) {
-    // 1. Esconde a tela de login
-    loginScreen.classList.add('hidden-content');
-    
-    // 2. Mostra o menu de navegação e o conteúdo principal
-    menuPrincipal.classList.remove('hidden-content');
-    mainContent.classList.remove('hidden-content');
+    // 1. Esconde a tela de login
+    loginScreen.classList.add('hidden-content');
+    
+    // 2. Mostra o menu de navegação
+    menuPrincipal.classList.remove('hidden-content');
+    
+    // 3. Garante que Home esteja visível e as outras escondidas
+    hideAllPages();
+    mainContent.classList.remove('hidden-content');
 
-    // 3. Garante que a tela de alunos esteja escondida
-    alunosPage.classList.add('hidden-content');
-
-    // 4. Personaliza a saudação no cabeçalho
-    saudarVisitante(username);
+    // 4. Personaliza a saudação no cabeçalho
+    saudarVisitante(username);
 }
 
 // --- Função para mostrar a Tela de Login (Logout) ---
 function showLoginPage() {
-    // 1. Mostra a tela de login
-    loginScreen.classList.remove('hidden-content');
-    
-    // 2. Esconde o menu e o conteúdo principal/alunos
-    menuPrincipal.classList.add('hidden-content');
-    mainContent.classList.add('hidden-content');
-    alunosPage.classList.add('hidden-content');
-    
-    // 3. Limpa campos e mensagem de erro
-    loginForm.reset();
-    loginMessage.textContent = '';
-    
-    // 4. Volta o título ao padrão
-    if (tituloPrincipal) {
-        tituloPrincipal.textContent = 'Nossa Escola';
-    }
+    // 1. Mostra a tela de login
+    loginScreen.classList.remove('hidden-content');
+    
+    // 2. Esconde o menu e todas as páginas de conteúdo
+    menuPrincipal.classList.add('hidden-content');
+    hideAllPages();
+    
+    // 3. Limpa campos e mensagem de erro
+    loginForm.reset();
+    loginMessage.textContent = '';
+    
+    // 4. Volta o título ao padrão
+    if (tituloPrincipal) {
+        tituloPrincipal.textContent = 'Nossa Escola';
+    }
 }
 
 
 // --- 3. Event Listener para o Formulário de Login ---
 loginForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); 
 
-    const usernameInput = document.getElementById('username').value;
-    const passwordInput = document.getElementById('password').value;
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
 
-    if (usernameInput === VALID_USERNAME && passwordInput === VALID_PASSWORD) {
-        // Login bem-sucedido
-        loginMessage.textContent = 'Login realizado com sucesso!';
-        // Usa um pequeno delay para a mensagem ser visível antes de carregar o conteúdo
-        setTimeout(() => {
-            showHomePage(usernameInput);
-        }, 500); 
-    } else {
-        // Login falhou
-        loginMessage.textContent = 'Credenciais inválidas. Tente novamente.';
-    }
+    if (usernameInput === VALID_USERNAME && passwordInput === VALID_PASSWORD) {
+        loginMessage.textContent = 'Login realizado com sucesso!';
+        setTimeout(() => {
+            showHomePage(usernameInput);
+        }, 500); 
+    } else {
+        loginMessage.textContent = 'Credenciais inválidas. Tente novamente.';
+    }
 });
 
 
 // --- 4. Event Listener para o botão Sair (Logout) ---
 logoutButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    showLoginPage();
+    event.preventDefault();
+    showLoginPage();
 });
 
 
-// --- 5. Lógica de Navegação entre Home e Alunos ---
+// --- 5. Lógica de Navegação entre Home, Alunos e Notícias ---
 
-// Link 'Alunos' no menu principal
+// Link 'Home'
+if (menuHomeLink) {
+    menuHomeLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        showHomePage(VALID_USERNAME); 
+    });
+}
+
+// Link 'Alunos'
 menuAlunosLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    mainContent.classList.add('hidden-content'); // Esconde Home
-    alunosPage.classList.remove('hidden-content'); // Mostra Alunos
+    event.preventDefault();
+    hideAllPages();
+    alunosPage.classList.remove('hidden-content'); // Mostra Alunos
 });
 
-// Link 'Home' no menu principal
-menuHomeLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    alunosPage.classList.add('hidden-content'); // Esconde Alunos
-    mainContent.classList.remove('hidden-content'); // Mostra Home
-});
+// Link 'Notícias'
+if (menuNoticiasLink) {
+    menuNoticiasLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        hideAllPages();
+        noticiasPage.classList.remove('hidden-content'); // Mostra Notícias
+    });
+}
+
 
 // Botão 'Voltar à Home' na página de alunos
 voltarHomeButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    alunosPage.classList.add('hidden-content'); // Esconde Alunos
-    mainContent.classList.remove('hidden-content'); // Mostra Home
+    event.preventDefault();
+    showHomePage(VALID_USERNAME); 
 });
 
+// Botão 'Voltar à Home' na página de notícias
+if (voltarHomeNoticiasButton) {
+    voltarHomeNoticiasButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showHomePage(VALID_USERNAME); 
+    });
+}
+
+
 // --- Inicialização ---
-// Inicia o site mostrando apenas a tela de login
 document.addEventListener('DOMContentLoaded', () => {
-    showLoginPage();
+    showLoginPage();
 });
