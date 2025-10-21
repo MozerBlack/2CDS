@@ -125,7 +125,7 @@ header {
 
 
 /* --------------------------------------- */
-/* MELHORIAS NO LAYOUT DOS ALUNOS */
+/* LAYOUT DOS ALUNOS */
 /* --------------------------------------- */
 
 .estudante {
@@ -146,7 +146,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    /* Ajuste para acomodar 6 cards (6*200px + 5*25px = 1325px) */
+    /* Ajustado para acomodar 6 cards */
     max-width: 1350px; 
     margin: 0 auto;
     padding: 20px 10px;
@@ -308,17 +308,17 @@ header {
 }
 
 .error-message {
-    color: rgb(94, 95, 94);
+    color: red;
     margin-top: 15px;
     font-weight: bold;
 }
 
 
 /* --------------------------------------- */
-/* TELA SEPARADA DE ALUNOS (Melhorias) */
+/* TELA SEPARADA DE ALUNOS (E CONFIGURAÇÕES) */
 /* --------------------------------------- */
 
-#alunos-page {
+#alunos-page, #configuracoes-page {
     min-height: 100vh;
     background-color: #ffffff;
     padding-top: 0;
@@ -359,7 +359,33 @@ header {
     background-color: #1e5a88;
 }
 
-/* Responsividade para o Cabeçalho da Página de Alunos */
+/* Estilo Específico para o Conteúdo de Configurações */
+.configuracoes-conteudo {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.configuracoes-conteudo h2 {
+    color: var(--cor-principal-dark);
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.config-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+/* Responsividade para o Cabeçalho da Página de Alunos/Configurações */
 @media (max-width: 768px) {
     .cabecalho-alunos {
         flex-direction: column;
@@ -380,6 +406,11 @@ header {
 
     .estudantes_todos {
         padding: 20px;
+    }
+    
+    .configuracoes-conteudo {
+        margin: 20px auto;
+        padding: 15px;
     }
 }
 
