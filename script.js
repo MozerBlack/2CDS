@@ -79,7 +79,7 @@ loginForm.addEventListener('submit', (event) => {
         }, 500); 
     } else {
         // Login falhou
-        loginMessage.textContent = 'Credenciais inválidas. Tente novamente.';
+        loginMessage.textContent = 'Usuário ou senha incorrta.';
     }
 });
 
