@@ -308,7 +308,7 @@ header {
 }
 
 .error-message {
-    color: red;
+    color: rgb(63, 62, 62);
     margin-top: 15px;
     font-weight: bold;
 }
