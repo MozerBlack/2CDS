@@ -79,7 +79,7 @@ loginForm.addEventListener('submit', (event) => {
         }, 500); 
     } else {
         // Login falhou
-        loginMessage.textContent = 'Usuário ou senha incorrta.';
+        loginMessage.textContent = 'Usuário ou senha incorreta.';
     }
 });
 
