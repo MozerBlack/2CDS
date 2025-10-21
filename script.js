@@ -16,8 +16,8 @@ const alunosPage = document.getElementById('alunos-page');
 const voltarHomeButton = document.getElementById('voltar-home');
 
 // Credenciais de Exemplo
-const VALID_USERNAME = 'user123';
-const VALID_PASSWORD = 'password';
+const VALID_USERNAME = 'Mozer';
+const VALID_PASSWORD = '12345';
 
 // --- Função de Saudação ---
 function saudarVisitante(username) {
