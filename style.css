@@ -1,146 +1,936 @@
-/* =======================
-   ESTILOS GERAIS
-======================= */
+html
+
+<<<<<<< HEAD
+
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Nossa Escola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen" class="login-container">
+    <div class="login-box">
+        <h2>Acesso ao Portal</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <p id="login-message" class="error-message"></p>
+        </form>
+    </div>
+</div>
+
+<header>
+    <div class="cabecalho-itens">
+        <div class="cabecalho-imagem">
+             <img src="logo_nossa_escola.png" alt="Logo da Página">
+        </div>
+        <h1 class="titulo_site">Nossa Escola</h1>
+        <div class="sociais">
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="whatsapp.png" alt="Logo do Whats da Escola">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="facebook.png" alt="Facebook da Escola">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="instagram.png" alt="instagram da Escola">
+            </a>
+        </div>
+    </div>
+</header>
+<nav class="menu-principal">
+    <a href="#" class="menu-link">Home</a>
+    <a href="#" class="menu-link" id="menu-alunos">Alunos</a> 
+    <a href="#" class="menu-link">Notícias</a>
+    <a href="#" class="menu-link" id="logout-button">Sair</a>
+</nav>
+
+<div id="main-content" class="hidden-content">
+    
+    <section class="banner1">
+        <img class="escola-image" src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+    </section>
+
+    <footer class="escola" id="escola">
+        <img class="logo_rodape" src="logo_nossa_escola.png" alt="Logo da Escola">
+        <h2 class="escola-titulo">Mais informações entre em contato<a class="link" href="https://wa.me/5541999999999"> 41 9.9999-9999</a></h2>
+        <p></p>
+        <p>©2025 | Curso de ADS | Aluno João Victor Mozer dos Santos | Todos os Direitos Reservados.
+            Política de Privacidade | Proteção de dados | Encarregado de dados</p>
+        <p> </p>
+    </footer>
+
+</div> 
+
+<div id="alunos-page" class="hidden-content">
+    
+    <header class="cabecalho-alunos">
+        <h1 class="titulo-alunos">Todos os Alunos em Destaque</h1>
+        <button id="voltar-home" class="btn-voltar">Voltar à Home</button>
+    </header>
+
+    <section class="estudante">
+        <h1 class="estudante_titulo">Lista Completa 2025</h1>
+        <div class="estudantes_todos">
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Antonio</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Raul</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Robert</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Allex</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Gilson</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Gabriel</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Gabriella</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Erika</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Ana</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Aghata</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Maria</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+            <div class="estudante-div">
+                <img class="estudante-imagem" src="estudante_menina.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
+                <h3 class="estudante-nome">Lara</h3>
+                <div class="estudante-icones">
+                    <a href="https://cursos.alura.com.br/dashboard" target="_blank">
+                        <img class="estudante-icone" src="logo_nossa_escola.png" alt="Link do Site da escola">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="estudante-icone" src="instagram.png" alt="Link do Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <img class="estudante-icone" src="facebook.png" alt="Link do Facebook">
+                    </a>
+                    <a href="https://wa.me/5541999999999" target="_blank">
+                        <img class="estudante-icone" src="whatsapp.png" alt="Link do Whatsapp">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div> 
+
+<script src="script.js" defer></script> 
+</body>
+</html>
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+
+css
+
+/* style.css */
+
+/* --------------------------------------- */
+<<<<<<< HEAD
+=======
+/* VARIÁVEIS CSS (Melhoria para Manutenção) */
+/* --------------------------------------- */
 :root {
-    --cor-principal: #003366;
-    --cor-secundaria: #007bff;
-    --cor-fundo: #f4f4f4;
-    --cor-texto: #333;
+    --cor-principal: #40A2E3;      /* Azul Claro (Links, botões, gradiente) */
+    --cor-principal-dark: #297bb3; /* Azul Escuro (Hover, gradiente, cabeçalho alunos) */
+    --cor-cabecalho: #424e61;     /* Azul Chumbo do Header */
+    --cor-fundo-aluno: #FFF6E9;   /* Bege Claro da Seção de Alunos */
+    --cor-fundo-login: #f0f2f5;   /* Cinza Claro da Tela de Login */
+    --cor-texto-padrao: #333;
 }
 
+/* --------------------------------------- */
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+/* BASE E REGRAS GERAIS */
+/* --------------------------------------- */
 * {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+=======
+    box-sizing: border-box; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
 body {
-    background: var(--cor-fundo);
-    color: var(--cor-texto);
+    font-family: "Poppins", sans-serif;
+<<<<<<< HEAD
+=======
+    color: var(--cor-texto-padrao); 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
-/* =======================
-   LOGIN
-======================= */
+/* --------------------------------------- */
+/* CABEÇALHO E NAVEGAÇÃO GERAL */
+/* --------------------------------------- */
+header {
+<<<<<<< HEAD
+    background-color: #424e61;
+=======
+    background-color: var(--cor-cabecalho);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.cabecalho-itens {
+    max-width: 1980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+<<<<<<< HEAD
+    justify-content: center;
+=======
+    justify-content: space-between; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+.cabecalho-imagem {
+<<<<<<< HEAD
+    width: 6%;
+=======
+    width: auto; 
+    max-width: 80px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+<<<<<<< HEAD
+=======
+}
+
+.cabecalho-imagem img {
+    width: 100%;
+    height: auto;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+.titulo_site {
+<<<<<<< HEAD
+    padding: 50px;
+=======
+    padding: 0 50px; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    text-align: center;
+    width: 50%;
+    font-size: 30px;
+<<<<<<< HEAD
+=======
+    flex-grow: 1; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+.sociais {
+    display: flex;
+    justify-content: flex-end;
+<<<<<<< HEAD
+    width: 25%;
+=======
+    width: auto; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    padding-right: 30px;
+}
+
+.sociais img {
+<<<<<<< HEAD
+    height: 40px; 
+=======
+    height: 40px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    width: auto;
+<<<<<<< HEAD
+    padding: 0 5px; 
+=======
+    padding: 0 5px;
+    transition: transform 0.2s;
+}
+
+.sociais img:hover {
+    transform: scale(1.1);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+/* MENU PRINCIPAL (NAV) */
+.menu-principal {
+<<<<<<< HEAD
+    background-color: #f8f8f8; 
+=======
+    background-color: #f8f8f8;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.menu-link {
+    text-decoration: none;
+<<<<<<< HEAD
+    color: #424e61; 
+=======
+    color: var(--cor-cabecalho);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.menu-link:hover {
+    color: white;
+<<<<<<< HEAD
+    background-color: #40A2E3; 
+=======
+    background-color: var(--cor-principal);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+
+/* --------------------------------------- */
+/* SEÇÕES PRINCIPAIS (Home) */
+/* --------------------------------------- */
+
+.banner1 {
+    display: flex;
+    justify-content: center;
+<<<<<<< HEAD
+=======
+}
+
+.escola-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+
+/* --------------------------------------- */
+/* MELHORIAS NO LAYOUT DOS ALUNOS */
+/* --------------------------------------- */
+
+.estudante {
+<<<<<<< HEAD
+    background-color: #FFF6E9;
+=======
+    background-color: var(--cor-fundo-aluno);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    padding: 24px 0;
+    text-align: center;
+}
+
+.estudante_titulo {
+    padding: 50px 0 30px;
+    text-align: center;
+<<<<<<< HEAD
+=======
+    font-size: 32px; 
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+/* Container que alinha todos os cards */
+.estudantes_todos {
+    display: flex;
+<<<<<<< HEAD
+    justify-content: center; /* Centraliza o bloco inteiro */
+    flex-wrap: wrap; 
+    gap: 25px; /* Adiciona espaçamento uniforme entre os cards */
+    
+    /* MODIFICAÇÃO CHAVE: Aumentar a largura máxima para acomodar 6 cards de 200px */
+    /* 6 * 200px (cards) + 5 * 25px (gaps) = 1325px. Usamos 1350px para margem. */
+    max-width: 1350px; 
+    
+    margin: 0 auto; /* Centraliza o contêiner dentro da tela */
+=======
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    padding: 20px 10px;
+}
+
+/* Estilo para cada card de aluno */
+.estudante-div {
+<<<<<<< HEAD
+    background-color: white; /* Fundo branco para o card */
+=======
+    background-color: white;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    padding: 25px 15px;
+    border-radius: 8px;
+<<<<<<< HEAD
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    /* MODIFICAÇÃO CHAVE: Forçar a largura exata e impedir encolhimento */
+    width: 200px; /* Largura padrão do card */
+    flex-shrink: 0; /* Impede que os cards encolham para caber mais */
+    flex-grow: 0; /* Impede que os cards cresçam para preencher espaço */
+    
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    text-align: center;
+    
+<<<<<<< HEAD
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+=======
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+/* Efeito de Hover/Focus nos Alunos */
+.estudante-div:hover,
+.estudante-div:focus-within {
+<<<<<<< HEAD
+    transform: scale(1.05); 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Sombra de destaque mais forte */
+=======
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    z-index: 10;
+}
+
+.estudante-imagem {
+<<<<<<< HEAD
+    width: 120px; /* Mantendo a largura original da imagem */
+=======
+    width: 120px;
+    /* CORREÇÃO APLICADA: Imagens quadradas/padrão */
+    border-radius: 0; 
+    object-fit: cover;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+.estudante-nome {
+    text-align: center;
+    margin-top: 10px;
+<<<<<<< HEAD
+=======
+    font-weight: 600;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+<<<<<<< HEAD
+/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
+=======
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+.estudante-icones {
+<<<<<<< HEAD
+    display: flex; 
+=======
+    display: flex;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    justify-content: center;
+<<<<<<< HEAD
+    margin-top: 15px; 
+=======
+    margin-top: 15px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+.estudante-icone {
+<<<<<<< HEAD
+    width: 32px; 
+    padding: 0 5px; 
+=======
+    width: 32px;
+    padding: 0 5px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
+
+/* --------------------------------------- */
+/* RODAPÉ (Footer) */
+/* --------------------------------------- */
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+.escola {
+<<<<<<< HEAD
+    background-image: linear-gradient(#40A2E3, #297bb3);
+=======
+    background-image: linear-gradient(var(--cor-principal), var(--cor-principal-dark));
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.escola-titulo {
+    padding: 50px;
+    text-align: center;
+}
+
+.logo_rodape {
+    height: 80px;
+    padding: 12px 0;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+<<<<<<< HEAD
+=======
+    transition: text-decoration 0.2s;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------- */
+/* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
+/* --------------------------------------- */
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
+.hidden-content {
+    display: none !important;
+}
+
+/* Estilo para a tela de login (ocupa a tela toda) */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+<<<<<<< HEAD
+    position: fixed; 
+=======
+    position: fixed;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+<<<<<<< HEAD
+    background-color: #f0f2f5; 
+=======
+    background-color: var(--cor-fundo-login);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    z-index: 1000;
 }
 
 .login-box {
-    background: white;
+    background-color: white;
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
     text-align: center;
 }
 
-.login-box h1 {
-    margin-bottom: 20px;
-    color: var(--cor-principal);
+.login-box h2 {
+<<<<<<< HEAD
+    color: #424e61;
+=======
+    color: var(--cor-cabecalho);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    margin-bottom: 30px;
 }
 
-.login-box input {
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .login-box button {
     width: 100%;
-    padding: 10px;
-    background: var(--cor-secundaria);
+    padding: 12px;
+<<<<<<< HEAD
+    background-color: #40A2E3;
+=======
+    background-color: var(--cor-principal);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .login-box button:hover {
-    background: #0056b3;
+<<<<<<< HEAD
+    background-color: #297bb3;
+=======
+    background-color: var(--cor-principal-dark);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
 .error-message {
     color: red;
-    margin-top: 10px;
-}
-
-/* =======================
-   CONTEÚDO PRINCIPAL
-======================= */
-.topo {
-    background: var(--cor-principal);
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.topo nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-.topo nav a:hover {
-    text-decoration: underline;
+
+/* --------------------------------------- */
+/* TELA SEPARADA DE ALUNOS (Melhorias) */
+/* --------------------------------------- */
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+#alunos-page {
+    min-height: 100vh;
+<<<<<<< HEAD
+    background-color: #ffffff; 
+=======
+    background-color: #ffffff;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    padding-top: 0;
 }
 
-.conteudo {
-    padding: 30px;
-}
-
-/* =======================
-   ALUNOS
-======================= */
-.alunos-container {
+<<<<<<< HEAD
+/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
+=======
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+.cabecalho-alunos {
+<<<<<<< HEAD
+    background-color: #297bb3; 
+=======
+    background-color: var(--cor-principal-dark);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    color: white;
+    padding: 20px 50px;
     display: flex;
-    justify-content: center;
+<<<<<<< HEAD
+    justify-content: space-between; /* Mantém o título à esquerda e o botão à direita */
+    align-items: center; /* Centraliza verticalmente o título e o botão */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+=======
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
-.aluno-card {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+.titulo-alunos {
+    font-size: 28px;
+    margin: 0;
+<<<<<<< HEAD
+    flex-grow: 1; /* Permite que o título ocupe o espaço extra */
+    text-align: left; /* Garante que o título se alinhe à esquerda */
+=======
+    flex-grow: 1;
+    text-align: left;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
-.aluno-card:hover {
-    transform: scale(1.05);
+.btn-voltar {
+<<<<<<< HEAD
+    background-color: #40A2E3;
+=======
+    background-color: var(--cor-principal);
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+<<<<<<< HEAD
+    white-space: nowrap; /* Evita que o texto do botão quebre */
+=======
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
 }
 
-.aluno-card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+.btn-voltar:hover {
+    background-color: #1e5a88;
 }
 
-.hidden-content {
-    display: none;
-}
-
-/* =======================
-   RESPONSIVO
-======================= */
-@media (max-width: 600px) {
-    .alunos-container {
+/* Responsividade para o Cabeçalho da Página de Alunos */
+@media (max-width: 768px) {
+    .cabecalho-alunos {
+<<<<<<< HEAD
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+=======
         flex-direction: column;
-        align-items: center;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+        padding: 20px;
+    }
+
+    .titulo-alunos {
+<<<<<<< HEAD
+        text-align: center; /* Centraliza o título */
+=======
+        text-align: center;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+        margin-bottom: 15px;
+<<<<<<< HEAD
+        flex-grow: 0; /* Remove o crescimento para centralização */
+=======
+        flex-grow: 0;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+        width: 100%;
+    }
+    
+    .btn-voltar {
+<<<<<<< HEAD
+        width: 100%; /* Botão ocupa a largura total */
+=======
+        width: 100%;
+        margin-top: 10px;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    }
+
+    .estudantes_todos {
+<<<<<<< HEAD
+        padding: 20px; /* Mais padding nas laterais em mobile */
+        max-width: 100%; /* Volta a usar a largura total em telas pequenas */
+=======
+        padding: 20px;
     }
 }
+
+/* Responsividade do Cabeçalho Principal (Home) */
+@media (max-width: 600px) {
+    .cabecalho-itens {
+        flex-direction: column;
+        text-align: center;
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+    }
+<<<<<<< HEAD
+=======
+    
+    .cabecalho-imagem, .titulo_site, .sociais {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .titulo_site {
+        padding: 10px 0;
+        font-size: 24px;
+    }
+    
+    .sociais {
+        padding-right: 0;
+    }
+>>>>>>> 8aea13c54fab4c7801422f46822b26a6862179ef
+}
+
