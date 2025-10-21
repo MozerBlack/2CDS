@@ -60,7 +60,6 @@ header {
 .titulo_site {
     padding: 0 50px; 
     text-align: center;
-    /* Ajustado para crescer e centralizar na tela */
     font-size: 30px;
     flex-grow: 1; 
 }
@@ -147,8 +146,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    /* Reduzido max-width para 5 colunas em desktops */
-    max-width: 1100px; 
+    /* Ajuste para acomodar 6 cards (6*200px + 5*25px = 1325px) */
+    max-width: 1350px; 
     margin: 0 auto;
     padding: 20px 10px;
 }
@@ -159,7 +158,6 @@ header {
     padding: 25px 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Força a largura para 5 colunas na maioria das telas */
     width: 200px; 
     flex-shrink: 0; 
     flex-grow: 0;
@@ -178,7 +176,6 @@ header {
 
 .estudante-imagem {
     width: 120px;
-    /* Removido o border-radius para ser mais coerente com imagens de perfil (se forem quadradas) */
     border-radius: 0; 
     object-fit: cover;
 }
@@ -189,7 +186,6 @@ header {
     font-weight: 600;
 }
 
-/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 .estudante-icones {
     display: flex;
     justify-content: center;
@@ -241,7 +237,6 @@ header {
 /* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
 /* --------------------------------------- */
 
-/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos/Menu */
 .hidden-content {
     display: none !important;
 }
@@ -329,7 +324,6 @@ header {
     padding-top: 0;
 }
 
-/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
 .cabecalho-alunos {
     background-color: var(--cor-principal-dark);
     color: white;
