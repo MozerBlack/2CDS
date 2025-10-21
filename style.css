@@ -6,9 +6,9 @@
 :root {
     --cor-principal: #40A2E3;      /* Azul Claro (Links, botões, gradiente) */
     --cor-principal-dark: #297bb3; /* Azul Escuro (Hover, gradiente, cabeçalho alunos) */
-    --cor-cabecalho: #424e61;     /* Azul Chumbo do Header */
-    --cor-fundo-aluno: #FFF6E9;   /* Bege Claro da Seção de Alunos */
-    --cor-fundo-login: #f0f2f5;   /* Cinza Claro da Tela de Login */
+    --cor-cabecalho: #424e61;      /* Azul Chumbo do Header */
+    --cor-fundo-aluno: #FFF6E9;    /* Bege Claro da Seção de Alunos */
+    --cor-fundo-login: #f0f2f5;    /* Cinza Claro da Tela de Login */
     --cor-texto-padrao: #333;
 }
 
@@ -60,7 +60,7 @@ header {
 .titulo_site {
     padding: 0 50px; 
     text-align: center;
-    width: 50%;
+    /* Ajustado para crescer e centralizar na tela */
     font-size: 30px;
     flex-grow: 1; 
 }
@@ -147,8 +147,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    /* Ajustado para uma largura que suporta 5-6 cards em telas grandes */
-    max-width: 1200px; 
+    /* Reduzido max-width para 5 colunas em desktops */
+    max-width: 1100px; 
     margin: 0 auto;
     padding: 20px 10px;
 }
@@ -159,7 +159,10 @@ header {
     padding: 25px 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    /* Força a largura para 5 colunas na maioria das telas */
+    width: 200px; 
+    flex-shrink: 0; 
+    flex-grow: 0;
     text-align: center;
     
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -175,7 +178,7 @@ header {
 
 .estudante-imagem {
     width: 120px;
-    /* CORREÇÃO APLICADA: Imagens quadradas/padrão */
+    /* Removido o border-radius para ser mais coerente com imagens de perfil (se forem quadradas) */
     border-radius: 0; 
     object-fit: cover;
 }
@@ -186,6 +189,7 @@ header {
     font-weight: 600;
 }
 
+/* Estilo para agrupar e centralizar os ícones sociais dentro do bloco do aluno */
 .estudante-icones {
     display: flex;
     justify-content: center;
@@ -195,6 +199,11 @@ header {
 .estudante-icone {
     width: 32px;
     padding: 0 5px;
+    transition: opacity 0.2s;
+}
+
+.estudante-icone:hover {
+    opacity: 0.8;
 }
 
 
@@ -232,7 +241,7 @@ header {
 /* ESTILOS DA TELA DE LOGIN E CONTEÚDO OCULTO */
 /* --------------------------------------- */
 
-/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos */
+/* Classe para esconder o conteúdo principal da Home ou a Tela de Alunos/Menu */
 .hidden-content {
     display: none !important;
 }
@@ -320,6 +329,7 @@ header {
     padding-top: 0;
 }
 
+/* Ajuste do cabeçalho dos alunos para alinhar e centralizar itens */
 .cabecalho-alunos {
     background-color: var(--cor-principal-dark);
     color: white;
@@ -399,5 +409,14 @@ header {
     
     .sociais {
         padding-right: 0;
+    }
+
+    .menu-principal {
+        padding: 5px 0;
+    }
+    .menu-link {
+        font-size: 16px;
+        padding: 8px 15px;
+        margin: 5px;
     }
 }
