@@ -8,7 +8,7 @@ const mainContent = document.getElementById('main-content');
 const loginMessage = document.getElementById('login-message');
 const logoutButton = document.getElementById('logout-button'); 
 const menuPrincipal = document.querySelector('.menu-principal'); 
-const menuHomeLink = document.getElementById('menu-home');
+// REMOVIDO: const menuHomeLink = document.getElementById('menu-home');
 
 // 2. Seletores da nova tela de alunos
 const menuAlunosLink = document.getElementById('menu-alunos');
@@ -100,12 +100,8 @@ menuAlunosLink.addEventListener('click', (event) => {
     alunosPage.classList.remove('hidden-content'); // Mostra Alunos
 });
 
-// Link 'Home' no menu principal
-menuHomeLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    alunosPage.classList.add('hidden-content'); // Esconde Alunos
-    mainContent.classList.remove('hidden-content'); // Mostra Home
-});
+// REMOVIDO: A lógica do link 'Home' do menu principal foi removida.
+// A Home agora só é acessada após o login, ou voltando da página de Alunos.
 
 // Botão 'Voltar à Home' na página de alunos
 voltarHomeButton.addEventListener('click', (event) => {
